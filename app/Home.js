@@ -1,8 +1,9 @@
+'use client'
 import Image from "next/image";
 const Home = () => {
     return (<>
 
-        <div className="container w-1/2  mx-auto mt-6 md:flex md:flex-row md:justify-center md:space-x-4 md:p-2">
+        <div className="container w-1/2  mx-auto mt-6 md:flex md:flex-row md:justify-center md:space-x-4 md:p-2 lg:flex lg:flex-row lg:justify-center lg:space-x-4 lg:p-2  ">
             <div className="flex flex-row  justify-center bg-zinc-900 p-6 h-64 w-full rounded-3xl mb-4">
                 <div className="flex flex-col w-3/4 justify-center ml-4">
                     <p className="text-sm  text-left font-medium  text-zinc-400">FULL STACK DEVELOPER</p>
@@ -36,7 +37,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className="container w-1/2 mx-auto md:flex md:flex-row md:justify-center md:space-x-4 md:p-2 ">
+        <div className="container w-1/2 mx-auto md:flex md:flex-row md:justify-center md:space-x-4 md:p-2 lg:flex lg:flex-row lg:justify-center lg:space-x-4 lg:p-2">
             <div className=" flex flex-row items-end bg-zinc-900 p-6 rounded-3xl h-64 w-full mb-4">
                 <div className="flex flex-col">
                     <p className="text-sm text-left font-normal text-zinc-400 mt-1">
