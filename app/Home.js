@@ -81,7 +81,7 @@ const Home = () => {
                 <div className="flex flex-col md:space-x-8 md:flex md:flex-row">
                     <div className="flex flex-col bg-zinc-800 rounded-2xl p-6 mb-4 ">
                         <p className="text-2xl  text-center font-semibold text-zinc-200">
-                            7th
+                            8th
                         </p>
                         <p className="text-sm text-center font-normal text-zinc-400 mt-2">
                             SEMESTER
