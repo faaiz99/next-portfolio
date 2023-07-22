@@ -2,8 +2,8 @@ import Image from "next/image";
 const page = () => {
     return (<>
         <div className="container w-1/2 mx-auto mt-12 flex flex-row justify-around space-x-4 p-2">
-            <div className="flex flex-col justify-center bg-zinc-900 p-8 rounded-3xl">
-                <Image src='/me.jpeg' className="rounded-full" width={430} height={100} />                
+            <div className="flex flex-col justify-center bg-zinc-900 p-8 rounded-full ">
+                <Image src='/me.jpeg' className="rounded-full w-full h-auto" width="0" height="0"  alt="Faaiz Aslam"/>                
             </div>
             <div>
                 <div className="mb-8">

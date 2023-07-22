@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Navbar = () => {
     return (
         <div className="container sm:w-1/2 mx-auto flex flex-row justify-between space-x-4 p-2">
-            <Image className=" mt-2" src='/coding.png' width={35} height={35} />
+            <Image className=" mt-2" src='/coding.png' width={35} height={35}  alt="Coding Logo"/>
             <div className="flex space-x-8 mt-3">
                 <Link className="text-center text-zinc-200 font-medium" href="/">Home</Link>
                 <Link className="text-center text-zinc-200 font-medium" href="/work">Work</Link>

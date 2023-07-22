@@ -60,10 +60,10 @@ const Home = () => {
             </div>
             <div className=" flex flex-col justify-end bg-zinc-900 p-6 rounded-3xl h-64 w-full mb-4">
                 <div className="flex flex-row mb-4 mt-4 justify-between">
-                    <Image src="/vue.png" width={30} height={40} />
-                    <Image src="/react.png" width={30} height={40} />
-                    <Image src="/mongo.png" width={30} height={40} />
-                    <Image src="/nodejs.png" width={30} height={40} />
+                    <Image src="/vue.png" width="0" height="0" className="w-full h-auto" alt="VueJS" />
+                    <Image src="/react.png" width="0" height="0" className="w-full h-auto" alt="ReactJS" />
+                    <Image src="/mongo.png" width="0" height="0" className="w-full h-auto" alt="MongoDB" />
+                    <Image src="/nodejs.png" width="0" height="0" className="w-full h-auto" alt="NodeJS" />
                 </div>
                 <div className="flex flex-col mt-4 ">
                     <p className="text-sm text-left font-normal text-zinc-400 mt-1">
