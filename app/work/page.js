@@ -1,6 +1,11 @@
 const page = () => {
     return (
-        <div className="container w-1/2 mx-auto rounded-3xl mt-12 justify-center space-x-4 p-8 bg-zinc-900">
+        <div className="container w-1/2 mx-auto rounded-3xl mt-2 justify-center space-x-4 p-8 bg-zinc-900">
+            <div className="container w-1/2 mx-auto mt-0 flex flex-row justify-around space-x-4 p-2">
+                <div className="mb-4">
+                    <p className="text-5xl text-center font-semibold  text-zinc-200">My Work</p>
+                </div>
+            </div>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-zinc-800 dark:text-gray-400">
@@ -69,7 +74,6 @@ const page = () => {
                     </tbody>
                 </table>
             </div>
-
         </div>
     );
 }
