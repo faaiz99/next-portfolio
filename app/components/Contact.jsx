@@ -1,7 +1,7 @@
-const page = () => {
+const Contact = () => {
     return (
         <div className="container w-1/2 mx-auto rounded-3xl mt-12 justify-center space-x-4 p-8 bg-zinc-900">
-            <p className="text-3xl text-left font-medium md:text-4xl md:text-left md:font-medium lg:text-5xl lg:text-left lg:font-medium">Let's work <span className="text-violet-500">together.</span>
+            <p className="text-7xl text-left font-bold" >Let's work <span className="text-7xl text-violet-500">together.</span>
             </p>
             <div className="flex flex-col mt-4">
                 <form action="/contact" method="post" className="flex flex-col">
@@ -30,4 +30,4 @@ const page = () => {
     );
 }
 
-export default page;
+export default Contact;

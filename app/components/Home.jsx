@@ -3,7 +3,7 @@ import Image from "next/image";
 const Home = () => {
     return (<>
         <div className="container w-1/2  mx-auto mt-6 md:flex md:flex-row md:justify-center md:space-x-4 md:p-2 lg:flex lg:flex-row lg:justify-center lg:space-x-4 lg:p-2  ">
-            <div className="flex flex-row  justify-center bg-zinc-900 p-6 h-64 w-full rounded-3xl mb-4">
+            <div className="flex flex-row  justify-center bg-zinc-900 p-6 h-64 w-full rounded-3xl mb-4 hover:scale-105 hover:border-2 border-zinc-400">
                 <div className="flex flex-col w-3/4 justify-center ml-4">
                     <p className="text-sm  text-left font-medium  text-zinc-400">FULL STACK DEVELOPER</p>
                     <p className="text-3xl text-left font-semibold  text-zinc-200">Faaiz</p>

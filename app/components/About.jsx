@@ -1,5 +1,5 @@
 import Image from "next/image";
-const page = () => {
+const About = () => {
     return (<>
         <div className="container w-1/2 mx-auto mt-12 flex flex-row justify-around space-x-4 p-2">
             <div className="flex flex-col justify-center bg-zinc-900 p-8 rounded-full ">
@@ -7,7 +7,7 @@ const page = () => {
             </div>
             <div>
                 <div className="mb-8">
-                    <p className="text-7xl text-center font-semibold  text-zinc-200">Summary</p>
+                    <p className="text-7xl text-center font-semibold  text-zinc-200">About Me</p>
                 </div>
                 <div className="flex grow-0 flex-col justify-end bg-zinc-900 p-8 rounded-3xl">
                     <p className="text-5xl text-left font-semibold  text-zinc-200">Faaiz Aslam</p>
@@ -75,11 +75,9 @@ const page = () => {
 
         </div>
         <div className="container w-1/2 mx-auto flex flex-row justify-around space-x-4 p-2">
-
-
         </div>
     </>
     );
 }
 
-export default page;
+export default About;
