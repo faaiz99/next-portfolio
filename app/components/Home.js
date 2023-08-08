@@ -2,37 +2,21 @@
 import Image from "next/image";
 const Home = () => {
     return (<>
-      <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Intro</p>
-            </div>
-        <div className="flex justify-around bg-zinc-900 p-6 h-auto w-auto rounded-3xl gap-24 ">
-            
-            <div className="flex justify-start bg-zinc-900 p-6 rounded-3xl h-auto w-auto mb-4">
-                <p className="text-left font-medium break-normal text-zinc-400">A self-motivated programmer with a passion to learn new things by experimenting.
-                    As a student, I look forward to get
-                    hands-on experience with test driven (TDD) as well as behavaior driven development (BDD) to build solutions that are robust and scalable.</p>
-            </div>
 
-            <div className="flex justify-start bg-zinc-900 p-6 rounded-3xl h-auto w-auto mb-4">
-                <p className="text-left font-medium  text-zinc-400">
-                    Future Plans
-                </p>
-            </div>
+        <div className="mt-12 mb-12 justify-around space-x-4 p-2">
+            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Intro</p>
         </div>
-        <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Way forward</p>
-            </div>
-        <div className="flex justify-around bg-zinc-900 p-6 h-auto w-auto rounded-3xl gap-24 ">
-            
-            <div className="flex justify-start bg-zinc-900 p-6 rounded-3xl h-auto w-auto mb-4">
-                <p className="text-left font-medium break-normal text-zinc-400">A self-motivated programmer with a passion to learn new things by experimenting.
-                    As a student, I look forward to get
-                    hands-on experience with test driven (TDD) as well as behavaior driven development (BDD) to build solutions that are robust and scalable.</p>
-            </div>
-
-            <div className="flex justify-start bg-zinc-900 p-6 rounded-3xl h-auto w-auto mb-4">
-                <p className="text-left font-medium  text-zinc-400">
-                    Future Plans
+        <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
+            <div className=" flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96 sm:w-4/6 md:w-4/6 lg:w-4/6 xl:w-4/6 mb-4 gap-4">
+                <img src="./faaiz.jpeg" className="rounded-full" />
+                <p className=" text-left font-medium break-normal text-zinc-400">Hello, Welcome to my portfolio, here's my brief introduction  <br></br>
+                    I'm a 8th semester sutdent @ COMSATS
+                    A self-motivated programmer with a passion to learn new things by experimenting.
+                    I look forward to get
+                    hands-on experience with test driven (TDD) as well as behavaior driven development (BDD) to build solutions that are robust and scalable.
+                    The portfolio starts off with my introduction, followed by my future plans and what I've done including my education and technical skills.
+                    After that I've used GitHub API to present a statistical and tabular view of my repositories. At the end there's a form that you can fill
+                    to have detailed converstion with me. Thank you!
                 </p>
             </div>
         </div>
