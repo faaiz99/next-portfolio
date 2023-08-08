@@ -5,12 +5,12 @@ const Work = ({ repos }) => {
 
     return (
         <>
-            <div className="container mx-auto  flex flex-row justify-around space-x-4 p-2">
+            <div className=" mt-12 mb-12 container mx-auto  flex flex-row justify-around space-x-4 p-2">
                 <p className="text-6xl text-center font-semibold  text-zinc-200">My Coding Crafts</p>
 
             </div>
-            <div className="container rounded-3xl mt-2  p-8 bg-zinc-900 mx-auto ">
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div className="container rounded-3xl mt-2  p-8 bg-zinc-900 mx-auto" id="work">
+                <div className="relative overflow-x-auto sm:rounded-lg">
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-zinc-800 dark:text-gray-400">
                             <tr>

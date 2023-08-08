@@ -6,7 +6,6 @@ import Work from './components/Work'
 
 
 
-
 export const getStaticProps = async () => {
   const token = process.env.GITHUB_TOKEN
   const name = process.env.GITHUB_USER_NAME
@@ -17,7 +16,8 @@ export const getStaticProps = async () => {
 
 export default function Main({ repo }) {
   return (
-    <main >
+    <main  className='border-2 border-yellow-200'>
+      
       <Home />
       <About />
       <Work />

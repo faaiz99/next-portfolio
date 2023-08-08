@@ -2,18 +2,19 @@ const Footer = () => {
     return (
         <footer className="mt-12" >
             <div className="mt-4 flex flex-row justify-center">
-                <ul className="flex text-sm font-medium text-zinc-400">
+               
+                <ul className="flex  text-sm font-medium text-zinc-400">
                     <li>
-                        <a href="#" className="mr-4 hover:text-zinc-200 hover:underline">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/faaiz-aslam" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">LinkedIn</a>
                     </li>
                     <li>
-                        <a href="#" className="mr-4 hover:text-zinc-200 hover:underline">Github</a>
+                        <a href="https://github.com/faaiz99" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Github</a>
                     </li>
                     <li>
-                        <a href="#" className="mr-4 hover:text-zinc-200 hover:underline">Twitter</a>
+                        <a href="https://twitter.com/commander2811" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Twitter</a>
                     </li>
                     <li>
-                        <a href="#" className="mr-4 hover:text-zinc-200 hover:underline">Upwork</a>
+                        <a href="https://stackoverflow.com/users/12505891/faaiz-aslam" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Stack Overflow</a>
                     </li>
                 </ul>
 
