@@ -19,7 +19,7 @@ export default function Main({ repo }) {
     <main >
       <Home />
       <About />
-      {/* <Work /> */}
+      <Work />
       <Contact />
     </main>
   )
