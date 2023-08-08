@@ -5,9 +5,8 @@ const Contact = () => {
                 Let's Work <span className=" text-4xl text-center font-semibold  sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-violet-500">Together.</span>
             </p>
         </div>
-        <div className="mx-auto rounded-3xl justify-center space-x-4 p-8 bg-zinc-900" id="contact">
-
-            <div className="flex flex-col mt-4">
+        <div className="rounded-3xl flex justify-center space-x-4 p-8  " id="contact">
+            <div className="mt-4">
                 <form action="/contact" method="post" className="flex flex-col">
                     <div className="mb-4">
                         <label htmlFor="default-input" className=" w-full md:w-64 lg:w-96 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
