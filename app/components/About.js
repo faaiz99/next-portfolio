@@ -2,7 +2,10 @@ const About = () => {
     return (
         <>
             <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="about">What I've done and studied</p>
+                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="about">What I've
+                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> done </span>and 
+                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> studied </span>
+                 </p>
             </div>
             <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">

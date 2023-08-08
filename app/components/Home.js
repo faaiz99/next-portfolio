@@ -4,7 +4,7 @@ const Home = () => {
     return (<>
 
         <div className="mt-12 mb-12 justify-around space-x-4 p-2">
-            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Intro</p>
+            <p className="text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold">Intro</p>
         </div>
         <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2" id="intro">
             <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">

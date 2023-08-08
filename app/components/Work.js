@@ -1883,34 +1883,38 @@ const Work = () => {
     }
 
     return (
-        <>       <p className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="work">My Coding Crafts</p>
+        <>       <p className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="work">My
+
+
+            <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold">      Coding </span>
+            Crafts</p>
             <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
-                    <p className="text-xl text-center font-semibold  text-zinc-200">Total Repos</p>
+                    <p className="text-xl text-center font-semibold  text-zinc-400">Total Repos</p>
 
-                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
                         {repos.length}
                     </p>
 
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
-                    <p className="text-xl text-center font-semibold  text-zinc-200">Followers</p>
+                    <p className="text-xl text-center font-semibold  text-zinc-400">Followers</p>
 
-                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
                         {user.followers}
                     </p>
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
-                    <p className="text-xl text-center font-semibold  text-zinc-200">Last Updated</p>
+                    <p className="text-xl text-center font-semibold  text-zinc-400">Last Updated</p>
 
-                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
                         {user.updated_at.slice(0, 10)}
                     </p>
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
-                    <p className="text-xl text-center font-semibold  text-zinc-200">Account Created</p>
+                    <p className="text-xl text-center font-semibold  text-zinc-400">Account Created</p>
 
-                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
                         {user.created_at.slice(0, 10)}
                     </p>
                 </div>
