@@ -16,12 +16,12 @@ export const getStaticProps = async () => {
 
 export default function Main({ repo }) {
   return (
-    <main  className='border-2 border-yellow-200'>
+    <main  >
       
-      <Home />
+      {/* <Home /> */}
       <About />
-      <Work />
-      <Contact />
+      {/* <Work /> */}
+      {/* <Contact /> */}
     </main>
   )
 }

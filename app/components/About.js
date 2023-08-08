@@ -1,11 +1,11 @@
 import Image from "next/image";
 const About = () => {
     return (<>
-        <div className="mx-auto mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-6xl text-center font-semibold  text-zinc-200" id="about">What I've done and studied</p>
+        <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2 ">
+            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="about">What I've done and studied</p>
         </div>
-        <div className=" mx-auto flex flex-row justify-around space-x-4 p-2">
-            <div className="flex flex-col justify-end bg-zinc-900 p-8 rounded-3xl h-auto w-auto">
+        <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2 h-96">
+            <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-full w-128">
                 <p className="text-xl text-left font-semibold  text-zinc-200">Education</p>
                 <ol className="relative border-l border-gray-200 dark:border-gray-700">
                     <li className="mb-10 ml-4">
@@ -26,7 +26,7 @@ const About = () => {
                 </ol>
 
             </div>
-            <div className="flex  grow flex-col  bg-zinc-900 p-8 rounded-3xl h-auto w-auto">
+            <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-full w-64">
                 <p className="text-xl text-left font-semibold  text-zinc-200">Courses</p>
                 <ul className="text-zinc-400">
                     <li className="flex items-center">
@@ -58,8 +58,8 @@ const About = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex  grow flex-col  bg-zinc-900 p-8 rounded-3xl h-auto w-auto">
-                <p className="text-xl text-left font-semibold  text-zinc-200">Frameworks/Library</p>
+            <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-full w-64">
+                <p className="text-xl text-left font-semibold  text-zinc-200">Frameworks</p>
                 <ul className="text-zinc-400">
                     <li className="flex items-center">
                         <svg className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
