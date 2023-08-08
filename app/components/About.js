@@ -75,6 +75,10 @@ const About = () => {
                             NextJS
                         </li>
                         <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Tailwind CSS
+                        </li>
+                        <li className="flex items-center">
                             <svg className="w-4 h-4 mr-1.5 text-red-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                             ExpressJS
                         </li>
@@ -92,6 +96,60 @@ const About = () => {
                         <li className="flex items-center">
                             <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                             TypeScript
+                        </li>
+                    </ul>
+                    <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">Operating System</p>
+                    <ul className="text-zinc-400">
+                    <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-yellow-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Ubuntu
+                        </li>
+                    </ul>
+                </div>
+                <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                    <p className="text-xl text-left font-semibold  text-zinc-200">Testing</p>
+                    <ul className="text-zinc-400">
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Jest
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Selenium
+                        </li>
+                    </ul>
+                    <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">Databases</p>
+                    <ul className="text-zinc-400">
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            MongoDB
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            PostgreSQL
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            SupaBase
+                        </li>
+                    </ul>
+                    <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">Misc Tools</p>
+                    <ul className="text-zinc-400">
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-orange-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Docker
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-orange-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Kubernetes
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-orange-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            Jenkins
+                        </li>
+                        <li className="flex items-center">
+                            <svg className="w-4 h-4 mr-1.5 text-orange-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                            AWS
                         </li>
                     </ul>
                 </div>

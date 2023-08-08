@@ -5,7 +5,7 @@ const Work = ({ repos }) => {
             <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
                 <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">My Coding Crafts</p>
             </div>
-            <div className="overflow-x-auto mt-12 mb-12 space-x-4 p-2">
+            <div className="overflow-x-auto mt-12 mb-12 px-12 grid-place lg:flex lg:justify-center">
                 <table className="text-sm text-left text-gray-400 rounded-lg">
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
                         <tr>
