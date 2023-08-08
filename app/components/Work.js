@@ -1883,7 +1883,7 @@ const Work = () => {
     }
 
     return (
-        <>       <p className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">My Coding Crafts</p>
+        <>       <p className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="work">My Coding Crafts</p>
             <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
                 <div className="flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
                     <p className="text-xl text-center font-semibold  text-zinc-200">Total Repos</p>
@@ -1915,7 +1915,7 @@ const Work = () => {
                     </p>
                 </div>
             </div>
-            <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center">
+            <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center" >
                 <table className="text-sm text-left text-gray-400 rounded-lg sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6">
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
                         <tr>
