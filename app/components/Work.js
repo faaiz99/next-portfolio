@@ -1846,16 +1846,76 @@ const Work = () => {
             "default_branch": "master"
         }
     ]
-    repos.sort((repoA, repoB) =>
-        repoA.updated_at - repoB.updated_at
-    )
+
+    let user = {
+        "login": "faaiz99",
+        "id": 44613754,
+        "node_id": "MDQ6VXNlcjQ0NjEzNzU0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44613754?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/faaiz99",
+        "html_url": "https://github.com/faaiz99",
+        "followers_url": "https://api.github.com/users/faaiz99/followers",
+        "following_url": "https://api.github.com/users/faaiz99/following{/other_user}",
+        "gists_url": "https://api.github.com/users/faaiz99/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/faaiz99/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/faaiz99/subscriptions",
+        "organizations_url": "https://api.github.com/users/faaiz99/orgs",
+        "repos_url": "https://api.github.com/users/faaiz99/repos",
+        "events_url": "https://api.github.com/users/faaiz99/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/faaiz99/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "company": null,
+        "blog": "",
+        "location": null,
+        "email": null,
+        "hireable": true,
+        "bio": null,
+        "twitter_username": null,
+        "public_repos": 18,
+        "public_gists": 0,
+        "followers": 5,
+        "following": 6,
+        "created_at": "2018-10-30T15:15:56Z",
+        "updated_at": "2023-08-08T05:47:03Z"
+    }
 
     return (
-        <>
-            <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">My Coding Crafts</p>
+        <>       <p className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">My Coding Crafts</p>
+            <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
+                <div className="flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
+                    <p className="text-xl text-center font-semibold  text-zinc-200">Total Repos</p>
+
+                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                        {repos.length}
+                    </p>
+
+                </div>
+                <div className="flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
+                    <p className="text-xl text-center font-semibold  text-zinc-200">Followers</p>
+
+                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                        {user.followers}
+                    </p>
+                </div>
+                <div className="flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
+                    <p className="text-xl text-center font-semibold  text-zinc-200">Last Updated</p>
+
+                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                        {user.updated_at.slice(0, 10)}
+                    </p>
+                </div>
+                <div className="flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
+                    <p className="text-xl text-center font-semibold  text-zinc-200">Account Created</p>
+
+                    <p className="text-violet-500 text-center text-5xl font-extrabold">
+                        {user.created_at.slice(0, 10)}
+                    </p>
+                </div>
             </div>
-            <div className="overflow-x-auto mt-12 mb-12 px-12 grid-place lg:flex lg:justify-center">
+            <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center">
                 <table className="text-sm text-left text-gray-400 rounded-lg">
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
                         <tr>
@@ -1900,26 +1960,26 @@ const Work = () => {
                         {repos.map(repo => {
                             return (<>
                                 <tr className=" border-b bg-zinc-700 ">
-                                    <th scope="row" className="px-6 py-4 font-medium  whitespace-nowrap text-white">
+                                    <th scope="row" className="px-6 py-4 font-medium  whitespace-nowrap text-white" >
                                         {repo.name}
                                     </th>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4" key={repo.node_id} >
                                         {repo.description}
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4" key={repo.node_id}>
                                         {repo.open_issues_count}
                                     </td>
-                                    <td className="px-6 py-4">
+                                    <td className="px-6 py-4" key={repo.node_id}>
                                         {repo.forks_count}
                                     </td>
-                                    <td className="px-6 py-4">
-                                        {repo.created_at}
+                                    <td className="px-6 py-4" key={repo.node_id}>
+                                        {repo.created_at.slice(0, 10)}
+                                    </td>
+                                    <td className="px-6 py-4" key={repo.node_id}>
+                                        {repo.updated_at.slice(0, 10)}
                                     </td>
                                     <td className="px-6 py-4">
-                                        {repo.updated_at}
-                                    </td>
-                                    <td className="px-6 py-4">
-                                        <a href={repo.html_url} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Link</a>
+                                        <a href={repo.html_url} target="_blank" className="font-medium text-blue-600  hover:font-bold hover:text-blue-400" key={repo.node_id} >Link</a>
                                     </td>
                                 </tr>
                             </>)

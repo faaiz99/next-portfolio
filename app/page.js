@@ -17,12 +17,12 @@ import Work from './components/Work'
 export default function Main({ repo }) {
   return (
     <main >
-
+      <Home />
       <About />
       <Work />
       <Contact />
 
-      {/* <Home /> */}
+
 
     </main>
   )

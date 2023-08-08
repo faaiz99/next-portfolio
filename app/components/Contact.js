@@ -2,10 +2,10 @@ const Contact = () => {
     return (<>
         <div className="mt-12 mb-12">
             <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" >
-                Let's Work <span className=" text-4xl text-center font-semibold  sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-violet-500">Together.</span>
+                Let's <span className=" text-4xl text-center font-semibold  sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-violet-500">Connect.</span>
             </p>
         </div>
-        <div className="rounded-3xl flex justify-center space-x-4 p-8  " id="contact">
+        <div className="rounded-3xl flex justify-center space-x-4 p-8  bg-zinc-900" id="contact">
             <div className="mt-4">
                 <form action="/contact" method="post" className="flex flex-col">
                     <div className="mb-4">
