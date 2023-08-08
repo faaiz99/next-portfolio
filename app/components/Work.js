@@ -2,12 +2,11 @@ const Work = ({ repos }) => {
 
     return (
         <>
-          <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
+            <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
                 <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">My Coding Crafts</p>
-
             </div>
-            <div className="overflow-x-auto mt-12 mb-12 space-x-4 p-2 flex justify-center items-center">
-                <table className="table-auto text-sm text-left text-gray-400 w-4/6 rounded-lg">
+            <div className="overflow-x-auto mt-12 mb-12 space-x-4 p-2">
+                <table className="text-sm text-left text-gray-400 rounded-lg">
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
                         <tr>
                             <th scope="col" className="px-6 py-3">
@@ -74,6 +73,7 @@ const Work = ({ repos }) => {
                     </tbody>
                 </table>
             </div>
+
         </>
 
     );

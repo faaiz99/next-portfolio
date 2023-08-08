@@ -1,7 +1,8 @@
 const Contact = () => {
     return (<>
         <div className="mt-12 mb-12">
-            <p className="text-6xl text-center font-semibold" >Let's Work <span className="text-6xl text-violet-500">Together.</span>
+            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" >
+                Let's Work <span className=" text-4xl text-center font-semibold  sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-violet-500">Together.</span>
             </p>
         </div>
         <div className="mx-auto rounded-3xl justify-center space-x-4 p-8 bg-zinc-900" id="contact">
