@@ -5,7 +5,7 @@ const About = () => {
                 <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="about">What I've done and studied</p>
             </div>
             <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
-                <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200">Education</p>
                     <ol className="relative border-l border-gray-200 dark:border-gray-700">
                         <li className="mb-10 ml-4">
@@ -26,7 +26,7 @@ const About = () => {
                     </ol>
 
                 </div>
-                <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200">Courses</p>
                     <ul className="text-zinc-400">
                         <li className="flex items-center">
@@ -58,7 +58,7 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200">Frameworks</p>
                     <ul className="text-zinc-400">
                         <li className="flex items-center">
@@ -105,7 +105,7 @@ const About = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200">Testing</p>
                     <ul className="text-zinc-400">
                         <li className="flex items-center">
