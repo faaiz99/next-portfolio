@@ -5,9 +5,9 @@ const Contact = () => {
                 Let's <span className=" text-4xl text-center font-semibold  sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-violet-500">Connect.</span>
             </p>
         </div>
-        <div className="rounded-3xl flex justify-center space-x-4 p-8  bg-zinc-900" id="contact">
-            <div className="mt-4">
-                <form action="/contact" method="post" className="flex flex-col">
+        <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
+            <div className=" flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
+            <form action="/contact" method="post" className="flex flex-col">
                     <div className="mb-4">
                         <label htmlFor="default-input" className=" w-full md:w-64 lg:w-96 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
                         <input type="text" id="default-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " placeholder="Sample Name"></input>
