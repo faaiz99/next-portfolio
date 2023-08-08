@@ -16,11 +16,19 @@ import Work from './components/Work'
 
 export default function Main({ repo }) {
   return (
-    <main  >
+    <main className=' ' >
+   
+     
+
+
+     
+      <About />
+      <Work />
+
       
       {/* <Home /> */}
-      <About />
-      {/* <Work /> */}
+   
+   
       {/* <Contact /> */}
     </main>
   )
