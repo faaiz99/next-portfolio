@@ -1,6 +1,3 @@
-
-
-
 const Work = ({ repos }) => {
 
     return (
