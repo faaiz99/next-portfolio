@@ -1,23 +1,18 @@
 import Image from "next/image";
 const About = () => {
     return (<>
-        <div className="container w-1/2 mx-auto mt-12 flex flex-row justify-around space-x-4 p-2">
-            <div className="flex flex-col justify-center bg-zinc-900 p-8 rounded-full ">
-                <Image src='/me.jpeg' className="rounded-full w-full h-auto" width="0" height="0"  alt="Faaiz Aslam"/>                
-            </div>
+        <div className="mx-auto mt-12 flex flex-row justify-around space-x-4 p-2">
             <div>
                 <div className="mb-8">
-                    <p className="text-7xl text-center font-semibold  text-zinc-200">About Me</p>
+                    <p className="text-6xl text-center font-semibold  text-zinc-200">What I've done and studied</p>
                 </div>
-                <div className="flex grow-0 flex-col justify-end bg-zinc-900 p-8 rounded-3xl">
+                {/* <div className="flex grow-0 flex-col justify-end bg-zinc-900 p-8 rounded-3xl">
                     <p className="text-5xl text-left font-semibold  text-zinc-200">Faaiz Aslam</p>
-                    <p className="text-md  text-left font-medium  text-zinc-400 mt-4">A self-motivated programmer with a passion to learn new things by experimenting.
-                        As a student, I look forward to get
-                        hands-on experience with web development and building scalable solutions.</p>
-                </div>
+         
+                </div> */}
             </div>
         </div>
-        <div className="container w-1/2 mx-auto flex flex-row justify-around space-x-4 p-2">
+        <div className=" mx-auto flex flex-row justify-around space-x-4 p-2">
             <div className="flex flex-col justify-end bg-zinc-900 p-8 rounded-3xl h-auto w-auto">
                 <p className="text-xl text-left font-semibold  text-zinc-200">Education</p>
                 <ol className="relative border-l border-gray-200 dark:border-gray-700">
@@ -69,13 +64,46 @@ const About = () => {
                         <svg className="w-4 h-4 mr-1.5 text-violet-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                         SIC - Artificial Intelligence
                     </li>
-
                 </ul>
             </div>
+            <div className="flex  grow flex-col  bg-zinc-900 p-8 rounded-3xl h-auto w-auto">
+                <p className="text-xl text-left font-semibold  text-zinc-200">Frameworks/Library</p>
+                <ul className="text-zinc-400">
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        ReactJS
+                    </li>
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        VueJS
+                    </li>
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        NextJS
+                    </li>
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-red-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        ExpressJS
+                    </li>
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-red-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        NestJS
+                    </li>
+                </ul>
+                <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">Languages</p>
+                <ul className="text-zinc-400">
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        JavaScript
+                    </li>
+                    <li className="flex items-center">
+                        <svg className="w-4 h-4 mr-1.5 text-sky-500  flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                        TypeScript
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-        </div>
-        <div className="container w-1/2 mx-auto flex flex-row justify-around space-x-4 p-2">
-        </div>
     </>
     );
 }
