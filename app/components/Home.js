@@ -10,10 +10,10 @@ const Home = () => {
             <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
                 <img src="./faaiz.jpeg" className="rounded-full" />
                 <p className=" text-justify font-medium break-normal text-zinc-400">Hello, Welcome to my portfolio, here's my brief introduction  <br></br>
-                    I'm a 8th semester sutdent @ COMSATS
+                    I'm a 8th semester student @ COMSATS
                     A self-motivated programmer with a passion to learn new things by experimenting.
                     I look forward to get
-                    hands-on experience with test driven (TDD) as well as behavaior driven development (BDD) to build solutions that are robust and scalable.
+                    hands-on experience with test driven (TDD) as well as behaviour driven development (BDD) to build solutions that are robust and scalable.
                     The portfolio starts off with my introduction, followed by my future plans and what I've done including my education and technical skills.
                     After that I've used GitHub API to present a statistical and tabular view of my repositories. At the end there's a form that you can fill
                     to have detailed converstion with me. Thank you!

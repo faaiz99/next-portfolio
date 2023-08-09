@@ -1892,7 +1892,7 @@ const Work = () => {
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
                     <p className="text-xl text-center font-semibold  text-zinc-400">Total Repos</p>
 
-                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
                         {repos.length}
                     </p>
 
@@ -1900,21 +1900,21 @@ const Work = () => {
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
                     <p className="text-xl text-center font-semibold  text-zinc-400">Followers</p>
 
-                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
                         {user.followers}
                     </p>
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
                     <p className="text-xl text-center font-semibold  text-zinc-400">Last Updated</p>
 
-                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
                         {user.updated_at.slice(0, 10)}
                     </p>
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
                     <p className="text-xl text-center font-semibold  text-zinc-400">Account Created</p>
 
-                    <p className="text-zinc-200 text-center text-5xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
                         {user.created_at.slice(0, 10)}
                     </p>
                 </div>
