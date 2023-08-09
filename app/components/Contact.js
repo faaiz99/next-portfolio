@@ -7,7 +7,7 @@ const Contact = () => {
             </p>
         </div>
         <div className="flex flex-wrap justify-center md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 " id="contact" >
-            <div className="hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-8 rounded-3xl  h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
+            <div className="hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-8 rounded-3xl  h-auto w-96 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 gap-4">
                 <form action="/contact" method="post" className="flex flex-col">
                     <div className="mb-4">
                         <label htmlFor="default-input" className=" w-full  block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
