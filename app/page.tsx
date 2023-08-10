@@ -1,5 +1,5 @@
 import '../app/globals.css'
-import Home from '../app/components/Home'
+import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
 import Work from './components/Work'
@@ -10,8 +10,6 @@ import { createClient } from '@supabase/supabase-js'
 // Create a single supabase client for interacting with your database
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-console.log('url',url);
-console.log('key',key);
 const supabase = createClient(url,key)
 
 async function getRepos() {
