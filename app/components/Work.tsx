@@ -8,7 +8,6 @@ const Work:React.FC = () => {
     let repos: Repos[] = [
         {
             "id": 502267298,
-            "node_id": "R_kgDOHe_9og",
             "name": "A-three-production",
             "html_url": "https://github.com/faaiz99/A-three-production",
             "description": "to run the project use CMD and go to project's directory and run command php artisan serve. ",
