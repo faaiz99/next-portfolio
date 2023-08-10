@@ -25,16 +25,9 @@ async function getRepos() {
 }
 
 
-
-
-
-
-
-
-
-
-export default function Main({ repos }) {
-console.log(repos);
+export default async function Main() {
+  const data = await getRepos()
+  console.log(data);
   return (
     <main >
       <Home />
