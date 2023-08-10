@@ -140,7 +140,6 @@ const Work:React.FC = () => {
                                     </td>
                                 </tr>
                             </React.Fragment>)
-
                         })}
                     </tbody>
                 </table>

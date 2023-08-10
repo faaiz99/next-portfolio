@@ -31,6 +31,7 @@ const getReposFromDB = async (): Promise<Repos[] > => {
 const insertReposToDB = async() : Promise<void> =>{
   console.log('hehe')
 
+  
   //https://api.github.com/users/faaiz99/repos
 }
 
@@ -38,13 +39,25 @@ const insertReposToDB = async() : Promise<void> =>{
 
 export default async function Main() {
   const data: Repos[] = await getReposFromDB()
-  console.log(data)
+  //console.log(data)
   return (
     <main >
+      <div className='my-48'>
       <Home />
+      </div>
+      <div className='my-48'>
       <About />
+      </div>
+      <div className='my-48'>
       <Work />
+      </div>
+      <div className='my-48'>
       <Contact />
+      </div>
+     
+ 
+ 
+     
     </main>
   )
 }

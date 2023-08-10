@@ -1,6 +1,6 @@
 const Footer:React.FC = () => {
     return (
-        <footer className=" mt-12" >
+        <footer className="mt-12" >
             <div className="mt-4 flex flex-row justify-center">
                
                 <ul className="flex  text-sm font-medium text-zinc-400">
