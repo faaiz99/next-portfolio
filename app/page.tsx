@@ -9,8 +9,11 @@ import { RealtimeChannel } from '@supabase/supabase-js'
 
 
 
+const getReposFromGH = async()=>{
 
-const getRepos = async (): Promise<Repos[]> => {
+}
+
+const getReposFromDB = async (): Promise<Repos[]> => {
   let { data: repos, error } = await supabase
   .from('repos')
   .select('*')
@@ -21,7 +24,7 @@ const getRepos = async (): Promise<Repos[]> => {
   return repos 
 }
 
-const insertRepos = async() : Promise<void> =>{
+const insertReposToDB = async() : Promise<void> =>{
   console.log('hehe');
 }
 
@@ -37,7 +40,7 @@ const repos:RealtimeChannel = supabase.channel('custom-update-channel')
   .subscribe()
 
 export default async function Main() {
-  const data:Repos[] = await getRepos()
+  const data:Repos[] = await getReposFromDB()
   console.log(data);
   return (
     <main >
