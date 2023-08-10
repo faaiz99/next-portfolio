@@ -1,35 +1,10 @@
 'use client'
 // will recieve a repos prop
 import React from 'react'
+import Repos from '../Types/Repos'
+import User from '../Types/User'
 const Work:React.FC = () => {
-    interface Repos {
-        id: number;
-        node_id: string;
-        name: string;
-        html_url: string;
-        description: string;
-        language:string
-        created_at: string;
-        updated_at: string;
-        forks_count: number;
-        open_issues_count: number;
-
-    }
-
-    interface User {
-        login: string;
-        id: number;
-        node_id: string;
-        avatar_url: string;
-        url: string;
-        html_url: string;
-        public_repos: number;
-        followers: number;
-        following: number;
-        created_at: string;
-        updated_at: string;
-    }
-
+   
     let repos: Repos[] = [
         {
             "id": 502267298,
