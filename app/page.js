@@ -9,7 +9,7 @@ import { createClient } from '@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-const key = process.env.NEXT_PUBLIC_API_KEY
+const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const supabase = createClient(url,key)
 
 async function getRepos() {
