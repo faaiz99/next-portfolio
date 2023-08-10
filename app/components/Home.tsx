@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-const Home = () => {
+const Home:React.FC = () => {
     return (<>
 
         <div className="mt-12 mb-12 justify-around space-x-4 p-2">

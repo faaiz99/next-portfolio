@@ -1,13 +1,14 @@
 'use client'
 // will recieve a repos prop
 import React from 'react'
-const Work = () => {
+const Work:React.FC = () => {
     interface Repos {
         id: number;
         node_id: string;
         name: string;
         html_url: string;
         description: string;
+        language:string
         created_at: string;
         updated_at: string;
         forks_count: number;
@@ -22,7 +23,6 @@ const Work = () => {
         avatar_url: string;
         url: string;
         html_url: string;
-        starred_url: string;
         public_repos: number;
         followers: number;
         following: number;
@@ -39,6 +39,7 @@ const Work = () => {
             "description": "to run the project use CMD and go to project's directory and run command php artisan serve. ",
             "created_at": "2022-06-11T06:16:19Z",
             "updated_at": "2023-07-14T08:07:08Z",
+            "language":"php",
             "forks_count": 0,
             "open_issues_count": 0
         },
@@ -51,7 +52,6 @@ const Work = () => {
         "avatar_url": "https://avatars.githubusercontent.com/u/44613754?v=4",
         "url": "https://api.github.com/users/faaiz99",
         "html_url": "https://github.com/faaiz99",
-        "starred_url": "https://api.github.com/users/faaiz99/starred{/owner}{/repo}",
         "public_repos": 18,
         "followers": 5,
         "following": 6,

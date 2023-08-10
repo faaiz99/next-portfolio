@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
         <div className="flex flex-row justify-between py-2 px-4 ">
             <Image className="mt-2" src='/coding.png' width={35} height={35} alt="Coding Logo" />

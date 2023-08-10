@@ -1,8 +1,8 @@
-const Contact = () => {
+const Contact: React.FC = () => {
     return (<>
         <div className="mt-12 mb-12">
             <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" >
-                Let's 
+                Let's
                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> Connect</span>.
             </p>
         </div>

@@ -1,4 +1,4 @@
-export const Future = () => {
+export const Future:React.FC = () => {
     return (<>
         <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
             <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Way forward</p>

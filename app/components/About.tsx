@@ -1,4 +1,4 @@
-const About = () => {
+const About:React.FC = () => {
     return (
         <>
             <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
