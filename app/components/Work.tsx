@@ -5,7 +5,7 @@ import Repos from '../Types/Repos'
 import User from '../Types/User'
 const Work:React.FC = () => {
    
-    let repos: Repos[] = [
+    const repos: Repos[] = [
         {
             "id": 502267298,
             "name": "A-three-production",
@@ -19,7 +19,7 @@ const Work:React.FC = () => {
         },
     ]
 
-    let user: User = {
+    const user: User = {
         "login": "faaiz99",
         "id": 44613754,
         "node_id": "MDQ6VXNlcjQ0NjEzNzU0",
@@ -136,7 +136,7 @@ const Work:React.FC = () => {
                                         {repo.updated_at.slice(0, 10)}
                                     </td>
                                     <td className="px-6 py-4">
-                                        <a href={repo.html_url} target="_blank" className="font-medium text-blue-600  hover:font-bold hover:text-blue-400">Link</a>
+                                        <a href={repo.html_url} target="_blank" className="font-medium text-blue-600  hover:font-bold hover:text-blue-400" rel="noreferrer">Link</a>
                                     </td>
                                 </tr>
                             </React.Fragment>)

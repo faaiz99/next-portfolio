@@ -14,7 +14,7 @@ export const metadata:Metadata = {
   description: 'Created by Faaiz Aslam',
 }
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children: React.ReactNode
 };
 
 
@@ -30,5 +30,5 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   );
 };
 
-export default RootLayout;
+export default RootLayout
 
