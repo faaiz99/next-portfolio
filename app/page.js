@@ -5,16 +5,39 @@ import About from './components/About'
 import Work from './components/Work'
 
 
+import { createClient } from '@supabase/supabase-js'
 
-// export const getStaticProps = async () => {
-//   const token = process.env.GITHUB_TOKEN
-//   const name = process.env.GITHUB_USER_NAME
-//   const res = await fetch('https://api.github.com/repos/vercel/next.js', { next: { revalidate: 100 } })
-//   const repo = await res.json()
-//   return { props: { repo } }
-// }
+// Create a single supabase client for interacting with your database
+const supabase = createClient(process.env.URL, process.env.API_KEY)
 
-export default function Main({ repo }) {
+
+async function getRepos() {
+  let { data: repos, error } = await supabase
+    .from('repos')
+    .select('*')
+
+
+  if (!repos) 
+    return "No Repositories found"
+
+
+  return repos
+}
+
+
+
+export const getStaticProps = async () => {
+  const repos = await getRepos()
+  return { props: { repos } }
+}
+
+
+
+
+
+
+export default function Main({ repos }) {
+console.log(repos);
   return (
     <main >
       <Home />
