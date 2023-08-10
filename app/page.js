@@ -8,7 +8,7 @@ import Work from './components/Work'
 import { createClient } from '@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
-const supabase = createClient(process.env.supabase_url, process.env.api_key)
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_API_KEY)
 
 
 async function getRepos() {
