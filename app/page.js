@@ -26,10 +26,7 @@ async function getRepos() {
 
 
 
-export const getStaticProps = async () => {
-  const repos = await getRepos()
-  return { props: { repos } }
-}
+
 
 
 
