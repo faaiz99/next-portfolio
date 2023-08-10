@@ -1,8 +1,9 @@
 
 import { Inter } from 'next/font/google'
-import Navbar from './components/navbar/Navbar'
+import Navbar from './components/navbar/Navbar' 
 import Footer from './Footer'
-const inter = Inter({ subsets: ['latin'] })
+import { NextFont } from 'next/dist/compiled/@next/font'
+const inter:NextFont= Inter({ subsets: ['latin'] })
 
 interface Metadata {
   title:string,

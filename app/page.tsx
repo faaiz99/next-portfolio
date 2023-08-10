@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
 import Work from './components/Work'
+import { Future } from './components/Future'
 import Repos from './Types/Repos'
 import { supabase } from './helper/db.helper'
 import { RealtimeChannel } from '@supabase/supabase-js'
@@ -31,7 +32,7 @@ const getReposFromDB = async (): Promise<Repos[] > => {
 const insertReposToDB = async() : Promise<void> =>{
   console.log('hehe')
 
-  
+
   //https://api.github.com/users/faaiz99/repos
 }
 
@@ -47,6 +48,9 @@ export default async function Main() {
       </div>
       <div className='my-48'>
       <About />
+      </div>
+      <div className='my-48'>
+      <Future />
       </div>
       <div className='my-48'>
       <Work />
