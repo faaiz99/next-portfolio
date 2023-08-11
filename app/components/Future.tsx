@@ -5,7 +5,7 @@ export const Future:React.FC = () => {
         </div>
         <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">  
  
-                <div className=" hover:shadow-lg hover:shadow-zinc-200 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200">What needs to be <span className="text-xl text-left font-bold  text-green-500">read</span></p>
                     <ul className="text-zinc-400">
                         <li className="flex items-center">
@@ -46,7 +46,7 @@ export const Future:React.FC = () => {
                     </ul>
                 </div>
               
-                <div className=" hover:shadow-lg hover:shadow-zinc-200 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
                     <p className="text-xl text-left font-semibold  text-zinc-200 ">What needs to be <span className="text-xl text-left font-bold  text-green-500">learned</span></p>
                     <ul className="text-zinc-400">
                         <li className="flex items-center">
