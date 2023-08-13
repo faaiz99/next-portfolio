@@ -3,6 +3,7 @@
 import React from 'react'
 import Repos from '../Types/Repos'
 import User from '../Types/User'
+import GitHubCalendar from 'react-github-calendar';
 const Work:React.FC = () => {
    
     const repos: Repos[] = [
@@ -41,37 +42,41 @@ const Work:React.FC = () => {
                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold">      Coding </span>
                 Crafts.</p>
             <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
-                    <p className="text-xl text-center font-semibold  text-zinc-400">Total Repos</p>
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-32">
+                    <p className="text-sm text-center font-semibold  text-zinc-400">Repos</p>
 
-                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-xl font-extrabold">
 
                         {repos.length}
                     </p>
 
                 </div>
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-48">
-                    <p className="text-xl text-center font-semibold  text-zinc-400">Followers</p>
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-32">
+                    <p className="text-center font-semibold  text-zinc-400">Followers</p>
 
-                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-xl font-extrabold">
                         {user.followers}
                     </p>
                 </div>
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
-                    <p className="text-xl text-center font-semibold  text-zinc-400">Last Updated</p>
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
+                    <p className="text-center font-semibold  text-zinc-400">Last Updated</p>
 
-                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-xl font-extrabold">
                         {user.updated_at.slice(0, 10)}
                     </p>
                 </div>
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-48 w-96">
-                    <p className="text-xl text-center font-semibold  text-zinc-400">Account Created</p>
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
+                    <p className="text-center font-semibold  text-zinc-400">Created</p>
 
-                    <p className="text-zinc-200 text-center text-4xl font-extrabold">
+                    <p className="text-zinc-200 text-center text-xl font-extrabold">
                         {user.created_at.slice(0, 10)}
                     </p>
                 </div>
+            
             </div>
+            <div className="justify-center flex mt-12">
+                <GitHubCalendar  username={process.env.NEXT_PUBLIC_USER_NAME} />
+                </div>
             <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center" >
                 <table className=" text-sm text-left text-gray-400 rounded-lg sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
