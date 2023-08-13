@@ -8,15 +8,7 @@ import Contact from './components/Contact'
 import About from './components/About'
 import Work from './components/Work'
 import { Future } from './components/Future'
-import Repos from './Types/Repos'
-import { supabase } from './helper/db.helper'
-import { RealtimeChannel } from '@supabase/supabase-js'
 import React from 'react'
-
-
-
-
-
 
 
 export default async function Main() {
@@ -25,24 +17,24 @@ export default async function Main() {
   return (
     <main >
       <div className='my-48'>
-      <Home />
+        <Home />
       </div>
       <div className='my-48'>
-      <About />
+        <About />
       </div>
       <div className='my-48'>
-      <Future />
+        <Future />
       </div>
       <div className='my-48'>
-      <Work />
+        <Work />
       </div>
       <div className='my-48'>
-      <Contact />
+        <Contact />
       </div>
-     
- 
- 
-     
+
+
+
+
     </main>
   )
 }

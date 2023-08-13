@@ -23,10 +23,7 @@ const Work:React.FC = () => {
     const user: User = {
         "login": "faaiz99",
         "id": 44613754,
-        "node_id": "MDQ6VXNlcjQ0NjEzNzU0",
         "avatar_url": "https://avatars.githubusercontent.com/u/44613754?v=4",
-        "url": "https://api.github.com/users/faaiz99",
-        "html_url": "https://github.com/faaiz99",
         "public_repos": 18,
         "followers": 5,
         "following": 6,

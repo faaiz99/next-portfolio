@@ -45,6 +45,39 @@ export interface Database {
         }
         Relationships: []
       }
+      users: {
+        Row: {
+          avatar_url: string
+          created_at: string
+          followers: number
+          following: number
+          id: number
+          login: string
+          public_repos: number
+          updated_at: string
+        }
+        Insert: {
+          avatar_url: string
+          created_at: string
+          followers: number
+          following: number
+          id?: number
+          login: string
+          public_repos: number
+          updated_at: string
+        }
+        Update: {
+          avatar_url?: string
+          created_at?: string
+          followers?: number
+          following?: number
+          id?: number
+          login?: string
+          public_repos?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

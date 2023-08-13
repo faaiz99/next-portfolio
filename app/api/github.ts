@@ -9,6 +9,8 @@ import { supabase } from '../helper/db.helper'
 import User from '../Types/User'
 import Repo from '../Types/Repos'
 
+// User 
+
 export const getUserFromGH = async (): Promise<void> => {
   let user: OctokitResponse<any>
   try {
@@ -22,25 +24,58 @@ export const getUserFromGH = async (): Promise<void> => {
   } catch (error) {
     console.log(error.message)
   }
-  console.log('over to transform function')
-  transformUser(user)
+  console.log('over to transform User function')
+  await transformUser(user)
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {
+  let mappedUser: User 
+  mappedUser = (({
+      id,
+      login,
+      avatar_url,
+      public_repos,
+      followers,
+      following,
+      created_at,
+      updated_at }) => ({
+        id,
+        login,
+        avatar_url,
+        public_repos,
+        followers,
+        following,
+        created_at,
+        updated_at,
 
-  const keys = ['login', 'id', 'node_id', 'avatar_url', 'url', 'html_url',
-    'public_repos', 'followers', 'following', 'created_at', 'updated_at']
-  let res = Object.fromEntries(keys.map((key) => [key, user[key]]));
-  //console.log(JSON.stringify(res, null, 4));
-  insertUserToDB(res as User)
+      }))(user.data);
+  console.log('over to db handler')
+  await insertUserToDB(mappedUser )
 }
 
-export const insertUserToDB = async (user:User): Promise<void> => {
-
+export const insertUserToDB = async (user: User): Promise<void> => {
+  const { data, error } = await supabase
+    .from('users')
+    .update({
+      // id:user.id,
+      login:user.login,
+      public_repos:user.public_repos,
+      followers:user.followers,
+      following:user.following,
+      avatar_url:user.avatar_url,
+      // created_at:user.created_at,
+      updated_at:user.updated_at,
+    }).eq('id', user.id)
+    .select()
+    if(data)
+    console.log('Data Updated Successfully:', data)
+    else if(error){
+      console.log('Data Could not be Updated', error)
+    }
 }
 
-
-export const getReposFromGH = async (): Promise<OctokitResponse<any>> => {
+// Repositories 
+export const getReposFromGH = async (): Promise<void> => {
   let repos: OctokitResponse<any>
   try {
     repos = await octokit.request('GET /users/{username}/repos', {
@@ -50,21 +85,52 @@ export const getReposFromGH = async (): Promise<OctokitResponse<any>> => {
         'Accept': 'application/vnd.github+json'
       }
     })
-
-    console.log(repos);
   } catch (error) {
     console.log(error.message)
   }
-  return repos.data
+  console.log('over to transform Repo function')
+  transformRepo(repos)
+}
+export const transformRepo = async (repos: OctokitResponse<any>): Promise<void> => {
+  let mappedRepos: Array<any> = []
+  repos.data.forEach((repo: Repo) => {
+    let picked = (({
+      id,
+      name,
+      html_url,
+      description,
+      language,
+      created_at,
+      updated_at,
+      forks_count,
+      open_issues_count }) => ({
+        id,
+        name,
+        html_url,
+        description,
+        language,
+        created_at,
+        updated_at,
+        forks_count,
+        open_issues_count
+      }))(repo);
+    mappedRepos.push(picked)
+  })
+  console.log('over to db handler')
+  await insertReposToDB(mappedRepos as Repo[])
+}
+export const insertReposToDB = async (repos: Repo[]): Promise<void> => {
+
+  const { data, error } = await supabase
+    .from('repos')
+    .upsert(repos)
+    if(data)
+    console.log('Data Updated Successfully:', data)
+    else if(error){
+      console.log('Data Could not be Updated', error)
+    }
 }
 
-export const transformRepo = () => {
 
-
-}
-
-export const insertReposToDB = async (): Promise<void> => {
-  console.log('hehe')
-
-  //https://api.github.com/users/faaiz99/repos
-}
+getReposFromGH()
+getUserFromGH()
