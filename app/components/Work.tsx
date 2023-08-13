@@ -76,6 +76,7 @@ const Work:React.FC = () => {
             </div>
             <div className="justify-center flex mt-12">
                 <GitHubCalendar  username={process.env.NEXT_PUBLIC_USER_NAME} />
+                {process.env.NEXT_PUBLIC_USER_NAME}
                 </div>
             <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center" >
                 <table className=" text-sm text-left text-gray-400 rounded-lg sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
