@@ -44,8 +44,8 @@ const Spinner: React.FC = () => {
 // div cannot be inside p tag it will cause hydration errors
 
 const Work: React.FC = () => {
-    const [repos, setRepos] = useState([])
-    const [user, setUser] = useState({})
+    const [repos, setRepos] = useState<Repo[]>([])
+    const [user, setUser] = useState<User>()
 
     const [userLoaded, setUserLoaded] = useState(false)
     const [repoLoaded, setRepoLoaded] = useState(false)
