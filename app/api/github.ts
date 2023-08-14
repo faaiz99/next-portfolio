@@ -21,11 +21,12 @@ export const getUserFromGH = async (): Promise<void> => {
         'Accept': 'application/vnd.github+json'
       }
     })
+    console.log('over to transform User function')
+    await transformUser(user)
   } catch (error) {
-    console.log(error.message)
+    console.log(error)
   }
-  console.log('over to transform User function')
-  await transformUser(user)
+
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {
@@ -85,11 +86,12 @@ export const getReposFromGH = async (): Promise<void> => {
         'Accept': 'application/vnd.github+json'
       }
     })
+    console.log('over to transform Repo function')
+    await transformRepo(repos)
   } catch (error) {
-    console.log(error.message)
+    console.log(error)
   }
-  console.log('over to transform Repo function')
-  transformRepo(repos)
+ 
 }
 export const transformRepo = async (repos: OctokitResponse<any>): Promise<void> => {
   let mappedRepos: Array<any> = []

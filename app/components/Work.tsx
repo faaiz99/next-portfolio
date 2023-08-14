@@ -7,6 +7,9 @@ import User from '../Types/User'
 import Repo from '../Types/Repos'
 import Github from './Github'
 
+
+
+
 const getRepos = async (range: number): Promise<Repo[]> => {
     const { data: repos, error } = await supabase
         .from('repos')
@@ -16,18 +19,16 @@ const getRepos = async (range: number): Promise<Repo[]> => {
         console.log('repos fetched:', repos);
     else if (error)
         console.log('error while fetching repos:', error);
-    return repos
+    return repos as Repo[]
 }
 const getUser = async (): Promise<User> => {
     const { data: users, error } = await supabase
         .from('users')
         .select('*')
-    if (users)
-        console.log('user fetched:', users);
-    else if (error)
+    if (error)
         console.log('error while fetching user:', error);
-
-    return users[0]
+    console.log('user fetched:', users);
+    return users![0]
 }
 
 const Spinner: React.FC = () => {
@@ -75,7 +76,7 @@ const Work: React.FC = () => {
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-32">
                     <p className="text-sm text-center font-semibold  text-zinc-400">Repos</p>
                     {
-                        repoLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">{repos.length}</p>:<Spinner/>
+                        repoLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">{repos.length}</p> : <Spinner />
                     }
 
                 </div>
@@ -83,34 +84,34 @@ const Work: React.FC = () => {
                     <p className="text-center font-semibold  text-zinc-400">Followers</p>
 
                     {
-                        userLoaded? <p className="text-zinc-200 text-center text-xl font-extrabold">
-                        {user.followers}
-                    </p>:<Spinner/>
+                        userLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">
+                            {user?.followers}
+                        </p> : <Spinner />
                     }
-                  
+
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
                     <p className="text-center font-semibold  text-zinc-400">Last Updated</p>
                     {
-                        userLoaded? <p className="text-zinc-200 text-center text-xl font-extrabold">
-                        {user.updated_at.slice(0, 10)}
-                    </p>: <Spinner/>
+                        userLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">
+                            {user?.updated_at.slice(0, 10)}
+                        </p> : <Spinner />
                     }
-                    
+
                 </div>
                 <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
                     <p className="text-center font-semibold  text-zinc-400">Created</p>
                     {
-                        userLoaded? <p className="text-zinc-200 text-center text-xl font-extrabold">
-                        {user.created_at.slice(0, 10)}
-                    </p> :<Spinner/>
+                        userLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">
+                            {user?.created_at.slice(0, 10)}
+                        </p> : <Spinner />
                     }
-                    
+
                 </div>
 
             </div>
             <div className="justify-center flex mt-12 px-12">
-                <Github/>
+                <Github />
             </div>
             <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center" >
                 <table className=" text-sm text-left text-gray-400 rounded-lg sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
