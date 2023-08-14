@@ -1,6 +1,6 @@
 export const Future:React.FC = () => {
     return (<>
-        <div className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
+        <div data-testid="future" className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
             <p className="text-4xl text-center font-bold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">The Way   <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> Forward</span>.</p>
         </div>
         <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">  

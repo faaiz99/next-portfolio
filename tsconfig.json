@@ -19,6 +19,7 @@
     "isolatedModules": true,
     "strictNullChecks":true,
     "jsx": "preserve",
+    "types": ["vitest/globals"],
     "plugins": [
       {
         "name": "next"

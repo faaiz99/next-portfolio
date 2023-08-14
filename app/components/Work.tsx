@@ -8,8 +8,6 @@ import Repo from '../Types/Repos'
 import Github from './Github'
 
 
-
-
 const getRepos = async (range: number): Promise<Repo[]> => {
     const { data: repos, error } = await supabase
         .from('repos')
