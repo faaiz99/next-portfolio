@@ -3,15 +3,14 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-empty-function */
 
-export const runtime = 'edge'; // 'nodejs' is the default
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 
-import { octokit } from '../helper/gh.helper'
+
+import { octokit } from './gh.helper'
 import { OctokitResponse } from '@octokit/types'
-import { supabase } from '../helper/db.helper'
+import { supabase } from './db.helper'
 import User from '../Types/User'
 import Repo from '../Types/Repos'
+
 
 // User 
 
@@ -33,8 +32,16 @@ export const getUserFromGH = async (): Promise<void> => {
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {
-  let mappedUser: User 
+  let mappedUser: User
   mappedUser = (({
+    id,
+    login,
+    avatar_url,
+    public_repos,
+    followers,
+    following,
+    created_at,
+    updated_at }) => ({
       id,
       login,
       avatar_url,
@@ -42,19 +49,11 @@ export const transformUser = async (user: OctokitResponse<any>): Promise<void> =
       followers,
       following,
       created_at,
-      updated_at }) => ({
-        id,
-        login,
-        avatar_url,
-        public_repos,
-        followers,
-        following,
-        created_at,
-        updated_at,
+      updated_at,
 
-      }))(user.data);
+    }))(user.data);
   console.log('over to db handler')
-  await insertUserToDB(mappedUser )
+  await insertUserToDB(mappedUser)
 }
 
 export const insertUserToDB = async (user: User): Promise<void> => {
@@ -62,20 +61,20 @@ export const insertUserToDB = async (user: User): Promise<void> => {
     .from('users')
     .update({
       // id:user.id,
-      login:user.login,
-      public_repos:user.public_repos,
-      followers:user.followers,
-      following:user.following,
-      avatar_url:user.avatar_url,
+      login: user.login,
+      public_repos: user.public_repos,
+      followers: user.followers,
+      following: user.following,
+      avatar_url: user.avatar_url,
       // created_at:user.created_at,
-      updated_at:user.updated_at,
+      updated_at: user.updated_at,
     }).eq('id', user.id)
     .select()
-    if(data)
+  if (data)
     console.log('Data Updated Successfully:', data)
-    else if(error){
-      console.log('Data Could not be Updated', error)
-    }
+  else if (error) {
+    console.log('Data Could not be Updated', error)
+  }
 }
 
 // Repositories 
@@ -94,7 +93,7 @@ export const getReposFromGH = async (): Promise<void> => {
   } catch (error) {
     console.log(error)
   }
- 
+
 }
 export const transformRepo = async (repos: OctokitResponse<any>): Promise<void> => {
   let mappedRepos: Array<any> = []
@@ -129,13 +128,9 @@ export const insertReposToDB = async (repos: Repo[]): Promise<void> => {
   const { data, error } = await supabase
     .from('repos')
     .upsert(repos)
-    if(data)
+  if (data)
     console.log('Data Updated Successfully:', data)
-    else if(error){
-      console.log('Data Could not be Updated', error)
-    }
+  else if (error) {
+    console.log('Data Could not be Updated', error)
+  }
 }
-
-
-getReposFromGH()
-getUserFromGH()
