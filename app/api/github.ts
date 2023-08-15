@@ -3,6 +3,10 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-empty-function */
 
+export const runtime = 'edge'; // 'nodejs' is the default
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
 import { octokit } from '../helper/gh.helper'
 import { OctokitResponse } from '@octokit/types'
 import { supabase } from '../helper/db.helper'
@@ -26,7 +30,6 @@ export const getUserFromGH = async (): Promise<void> => {
   } catch (error) {
     console.log(error)
   }
-
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {

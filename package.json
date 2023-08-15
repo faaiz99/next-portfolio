@@ -39,6 +39,7 @@
         "eslint-config-next": "^13.4.13",
         "eslint-plugin-react": "^7.33.1",
         "jsdom": "^22.1.0",
+        "msw": "^1.2.3",
         "typescript": "^5.1.6",
         "vercel": "^31.2.3",
         "vitest": "^0.34.1"
