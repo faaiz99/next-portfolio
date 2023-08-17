@@ -9,12 +9,12 @@ import { getUserFromGH } from "../../helper/github.helper"
 
 
 
-export async function GET(req: NextRequest, res: NextResponse) {
-  console.log('here')
 
+export async function GET(req: NextRequest, res: NextResponse) {
   try {
-    await getReposFromGH()
-    await getUserFromGH()
+    // await getReposFromGH()
+    // await getUserFromGH()
+    await Promise.race([getReposFromGH(), getUserFromGH()])
     return NextResponse.json(
       { message: "User/Repos fetched and updated" },
       {

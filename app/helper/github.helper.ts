@@ -67,12 +67,10 @@ export const insertUserToDB = async (user: User): Promise<void> => {
       following: user.following,
       avatar_url: user.avatar_url,
       // created_at:user.created_at,
-      updated_at: user.updated_at,
+      updated_at: new Date()
     }).eq('id', user.id)
     .select()
-  if (data)
-    console.log('Data Updated Successfully:', data)
-  else if (error) {
+  if (error) {
     console.log('Data Could not be Updated', error)
   }
 }

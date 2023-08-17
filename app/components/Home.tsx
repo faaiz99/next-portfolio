@@ -5,9 +5,9 @@ const Home:React.FC = () => {
             <p className="text-center text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold">Intro</p>
         </div>
         <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2" id="intro">
-            <div className=" hover:shadow-lg  hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
+            <div className=" hover:shadow-lg  hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96  sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
            
-              <Image src="/./faaiz.jpeg" className="h-auto w-auto border-2 border-green-500 rounded-full" alt="picture of faaiz" width={0} height={0} />
+              <Image src="/./faaiz.jpeg" loading = 'lazy' className="h-auto w-auto border-2 border-green-500 rounded-full" alt="picture of faaiz" width={0} height={0} />
     
                 <p className=" text-justify font-medium break-normal text-zinc-400">Hello, Welcome to my portfolio, here's my brief introduction  <br></br>
                     I'm a 8th semester student @ COMSATS
