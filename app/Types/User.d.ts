@@ -6,5 +6,5 @@ export default interface User {
     followers: number;
     following: number;
     created_at: string;
-    updated_at: Date;
+    updated_at: string;
 }

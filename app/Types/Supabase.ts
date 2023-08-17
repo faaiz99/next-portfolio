@@ -54,7 +54,7 @@ export interface Database {
           id: number
           login: string
           public_repos: number
-          updated_at: Date
+          updated_at: string
         }
         Insert: {
           avatar_url: string
@@ -64,7 +64,7 @@ export interface Database {
           id?: number
           login: string
           public_repos: number
-          updated_at: Date
+          updated_at: string
         }
         Update: {
           avatar_url?: string
@@ -74,7 +74,7 @@ export interface Database {
           id?: number
           login?: string
           public_repos?: number
-          updated_at?: Date
+          updated_at?: string
         }
         Relationships: []
       }

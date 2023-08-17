@@ -57,6 +57,9 @@ export const transformUser = async (user: OctokitResponse<any>): Promise<void> =
 }
 
 export const insertUserToDB = async (user: User): Promise<void> => {
+
+
+  const getDate = ()=> new Date().toString()
   const { data, error } = await supabase
     .from('users')
     .update({
@@ -67,7 +70,7 @@ export const insertUserToDB = async (user: User): Promise<void> => {
       following: user.following,
       avatar_url: user.avatar_url,
       // created_at:user.created_at,
-      updated_at: new Date()
+      updated_at: getDate()
     }).eq('id', user.id)
     .select()
   if (error) {
