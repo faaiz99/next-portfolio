@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                     onSubmit={async (values, actions) => {
                         console.log(values);
                         actions.setSubmitting(false)
-                        fetch(window.origin+`/api/contact`, {
+                        fetch(`/api/contact`, {
                             method: 'POST',
                             headers: {
                                 Accept: 'application.json',
