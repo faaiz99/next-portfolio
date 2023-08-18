@@ -9,7 +9,7 @@ const Home:React.FC = () => {
            
               <Image src="/./faaiz.jpeg" loading = 'lazy' className="h-auto w-auto border-2 border-green-500 rounded-full" alt="picture of faaiz" width={0} height={0} />
     
-                <p className=" text-justify font-medium break-normal text-zinc-400">Hello, Welcome to my portfolio, here's my brief introduction  <br></br>
+                <p className=" text-justify font-normal break-normal text-zinc-400">Hello, Welcome to my portfolio, here's my brief introduction  <br></br>
                     I'm a 8th semester student @ COMSATS
                     A self-motivated programmer with a passion to learn new things by experimenting.
                     I look forward to get

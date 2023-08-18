@@ -69,20 +69,20 @@ const Work: React.FC = () => {
                     }
 
                 </div>
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-auto">
                     <p className="text-center font-semibold  text-zinc-400">Last Updated</p>
                     {
                         userLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">
-                            {user?.updated_at.slice(0, 10)}
+                            {user?.updated_at.slice(0, 15)}
                         </p> : <Spinner />
                     }
 
                 </div>
-                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-48">
+                <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-auto">
                     <p className="text-center font-semibold  text-zinc-400">Created</p>
                     {
                         userLoaded ? <p className="text-zinc-200 text-center text-xl font-extrabold">
-                            {user?.created_at.slice(0, 10)}
+                            {user?.created_at.slice(0, 15)}
                         </p> : <Spinner />
                     }
 

@@ -26,7 +26,7 @@ export const getUserFromGH = async (): Promise<void> => {
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {
-  const mappedUser: User= (({
+  const mappedUser: User = (({
     id,
     login,
     avatar_url,
@@ -45,7 +45,7 @@ export const transformUser = async (user: OctokitResponse<any>): Promise<void> =
       updated_at,
 
     }))(user.data);
-  
+
   console.log('over to db handler')
   await insertUserToDB(mappedUser)
 }
@@ -53,19 +53,20 @@ export const transformUser = async (user: OctokitResponse<any>): Promise<void> =
 export const insertUserToDB = async (user: User): Promise<void> => {
 
 
-  const getDate = ()=> new Date().toString()
-  const {error } = await supabase
+  const getDate = () => new Date().toString()
+  const { id ,login, public_repos, followers, following, avatar_url, created_at } = user
+  const { error } = await supabase
     .from('users')
     .update({
       // id:user.id,
-      login: user.login,
-      public_repos: user.public_repos,
-      followers: user.followers,
-      following: user.following,
-      avatar_url: user.avatar_url,
-      // created_at:user.created_at,
+      login: login,
+      public_repos: public_repos,
+      followers: followers,
+      following: following,
+      avatar_url: avatar_url,
+      created_at: created_at,
       updated_at: getDate()
-    }).eq('id', user.id)
+    }).eq('id', id)
   if (error) {
     console.log('Data Could not be Updated', error)
   }

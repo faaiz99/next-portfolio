@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                             </div>
 
                             <div className="mt-6 flex justify-center ">
-                                <button type="submit" disabled={isSubmitting} className="bg-zinc-100 w-32  text-zinc-950 text-md font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " >Send</button>
+                                <button type="submit" disabled={isSubmitting} className="bg-zinc-100 w-48  text-zinc-950 text-md font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 " >Send</button>
                             </div>
                         </form>
                     )}
