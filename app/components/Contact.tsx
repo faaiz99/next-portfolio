@@ -46,12 +46,18 @@ const Contact: React.FC = () => {
                     validationSchema={messageSchema}
                     onSubmit={async (values, actions) => {
                         actions.setSubmitting(false)
-                        fetch('api/contact', {
+                        fetch(window.origin+`/api/contact`, {
                             method: 'POST',
                             headers: {
                                 Accept: 'application.json',
-                                'Content-Type': 'application/json'
+                                'Content-Type': 'application/json',
+                                "Access-Control-Allow-Methods":"GET,POST",
+                                "Access-Control-Allow-Credentials":"true",
+                                "Access-Control-Allow-Origin": "*"
+                                
                             },
+                            referrerPolicy: "no-referrer",
+                            
                             body: JSON.stringify(values),
                             cache: 'default'
                         })
@@ -63,7 +69,6 @@ const Contact: React.FC = () => {
 
                             }
                         })
-                        alert('Message Sent!')
                     }}
                 >
                     {({
