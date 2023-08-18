@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import '../app/globals.css'
 import Home from './components/Home'
 import Contact from './components/Contact'

@@ -1,10 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-empty-function */
-
-
-
 import { octokit } from './gh.helper'
 import { OctokitResponse } from '@octokit/types'
 import { supabase } from './db.helper'
@@ -32,8 +26,7 @@ export const getUserFromGH = async (): Promise<void> => {
 }
 
 export const transformUser = async (user: OctokitResponse<any>): Promise<void> => {
-  let mappedUser: User
-  mappedUser = (({
+  const mappedUser: User= (({
     id,
     login,
     avatar_url,
@@ -52,6 +45,7 @@ export const transformUser = async (user: OctokitResponse<any>): Promise<void> =
       updated_at,
 
     }))(user.data);
+  
   console.log('over to db handler')
   await insertUserToDB(mappedUser)
 }
@@ -60,7 +54,7 @@ export const insertUserToDB = async (user: User): Promise<void> => {
 
 
   const getDate = ()=> new Date().toString()
-  const { data, error } = await supabase
+  const {error } = await supabase
     .from('users')
     .update({
       // id:user.id,
@@ -72,7 +66,6 @@ export const insertUserToDB = async (user: User): Promise<void> => {
       // created_at:user.created_at,
       updated_at: getDate()
     }).eq('id', user.id)
-    .select()
   if (error) {
     console.log('Data Could not be Updated', error)
   }
@@ -97,9 +90,9 @@ export const getReposFromGH = async (): Promise<void> => {
 
 }
 export const transformRepo = async (repos: OctokitResponse<any>): Promise<void> => {
-  let mappedRepos: Array<any> = []
+  const mappedRepos: Array<any> = []
   repos.data.forEach((repo: Repo) => {
-    let picked = (({
+    const picked = (({
       id,
       name,
       html_url,

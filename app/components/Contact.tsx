@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-
 'use client'
 import {
     Formik,
     ErrorMessage
 } from 'formik';
+
+import { supabase } from '../helper/db.helper';
 
 import * as Yup from 'yup';
 
@@ -15,7 +14,17 @@ interface MessageFormValues {
     message: string
 }
 
+const handleMessage = async (values: MessageFormValues) => {
+    const { name, email, message } = values
+    const {error } = await supabase
+        .from('messages')
+        .insert([
+            { name: name, email: email, message: message },
+        ])
+    if(error)
+        console.log(error);
 
+}
 
 const messageSchema = Yup.object().shape({
     name: Yup.string()
@@ -45,23 +54,8 @@ const Contact: React.FC = () => {
                     initialValues={initialValues}
                     validationSchema={messageSchema}
                     onSubmit={async (values, actions) => {
-                        console.log(values);
                         actions.setSubmitting(false)
-                        fetch(`/api/contact`, {
-                            method: 'POST',
-                            headers: {
-                                Accept: 'application.json',
-                                'Content-Type': 'application/json',
-                                "Access-Control-Allow-Methods":"GET,POST",
-                                "Access-Control-Allow-Credentials":"true",
-                                "Access-Control-Allow-Origin": "*"
-                                
-                            },
-                            referrerPolicy: "no-referrer",
-                            
-                            body: JSON.stringify(values),
-                            cache: 'default'
-                        })
+                        handleMessage(values)
                         actions.resetForm({
                             values: {
                                 name: '',
@@ -70,6 +64,7 @@ const Contact: React.FC = () => {
 
                             }
                         })
+                        alert('Message Sent')
                     }}
                 >
                     {({

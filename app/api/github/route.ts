@@ -1,19 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-empty-function */
-import { NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 import { getReposFromGH } from "../../helper/github.helper"
 import { getUserFromGH } from "../../helper/github.helper"
 
-
-
-
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET() {
   try {
-    // await getReposFromGH()
-    // await getUserFromGH()
     await Promise.race([getReposFromGH(), getUserFromGH()])
     return NextResponse.json(
       { message: "User/Repos fetched and updated" },
