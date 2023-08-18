@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from "next/server"
 import { supabase } from '../../helper/db.helper'
-// export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest, res: NextResponse) {
 
