@@ -3,7 +3,7 @@ const Footer:React.FC = () => {
         <footer className="mt-12" data-testid='footer'>
             <div className="mt-4 flex flex-row justify-center">
                
-                <ul className="flex  text-sm font-semibold text-zinc-400">
+                <ul className="flex text-sm font-semibold text-zinc-400">
                     <li>
                         <a href="https://www.linkedin.com/in/faaiz-aslam" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">LinkedIn</a>
                     </li>
@@ -19,9 +19,9 @@ const Footer:React.FC = () => {
                 </ul>
 
             </div>
-            <div className="flex flex-row justify-center mt-4">
-                <p className="text-sm font-semibold text-left  text-zinc-400 mt-1">
-                    Made in Next JS and Sugar Coded in Tailwind by Faaiz Aslam™
+            <div className="flex justify-center mt-4">
+                <p className="text-sm font-normal text-center text-zinc-400 mt-1">
+                    Made in Next JS and Sugar Coded in Tailwind
                 </p>
             </div>
         </footer>

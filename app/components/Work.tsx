@@ -93,7 +93,7 @@ const Work: React.FC = () => {
                 <Github />
             </div>
             <div className="overflow-x-auto mt-12 mb-12 px-12  lg:flex lg:justify-center" >
-                <table className=" text-sm text-left text-gray-400 rounded-lg sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
+                <table className=" text-sm text-left text-gray-400 rounded-full sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
                     <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
                         <tr>
                             <th scope="col" className="px-6 py-3">
