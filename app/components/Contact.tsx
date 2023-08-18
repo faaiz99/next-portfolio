@@ -45,6 +45,7 @@ const Contact: React.FC = () => {
                     initialValues={initialValues}
                     validationSchema={messageSchema}
                     onSubmit={async (values, actions) => {
+                        console.log(values);
                         actions.setSubmitting(false)
                         fetch(window.origin+`/api/contact`, {
                             method: 'POST',
