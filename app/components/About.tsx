@@ -2,9 +2,9 @@ const About:React.FC = () => {
     return (
         <>
             <div data-testid="about" className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2">
-                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" id="about">What I've
-                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> done </span>and 
-                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> studied</span>
+                <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" id="about">What I've
+                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold"> done </span>and 
+                 <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold"> studied</span>
                  .
                  </p>
             </div>

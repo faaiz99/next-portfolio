@@ -43,9 +43,9 @@ const Contact: React.FC = () => {
     const initialValues: MessageFormValues = { name: "", email: "", message: "" }
     return (<>
         <div className="mt-12 mb-12" data-testid='contact'>
-            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl" >
+            <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" >
                 Let's
-                <span className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-green-500 font-extrabold"> Connect</span>.
+                <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold"> Connect</span>.
             </p>
         </div>
         <div className="flex flex-wrap justify-center md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 " id="contact" >
