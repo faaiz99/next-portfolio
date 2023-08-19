@@ -54,7 +54,7 @@ export const insertUserToDB = async (user: User): Promise<void> => {
 
 
   const getDate = () => new Date().toString()
-  const { id ,login, public_repos, followers, following, avatar_url, created_at } = user
+  const { id ,login, public_repos, followers, following, avatar_url} = user
   const { error } = await supabase
     .from('users')
     .update({
@@ -64,7 +64,7 @@ export const insertUserToDB = async (user: User): Promise<void> => {
       followers: followers,
       following: following,
       avatar_url: avatar_url,
-      created_at: created_at,
+      // created_at: created_at,
       updated_at: getDate()
     }).eq('id', id)
   if (error) {
