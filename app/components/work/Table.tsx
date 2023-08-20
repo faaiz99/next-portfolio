@@ -117,7 +117,7 @@ const Table:React.FC = () => {
         </div>
     </div>
 </div>
-<div className="overflow-x-auto  mb-1 px-12  lg:flex lg:justify-center" >
+<div className="overflow-x-auto mb-1 px-12  lg:flex lg:justify-center" >
     <table className=" text-sm text-left text-gray-400 rounded-full sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6" >
         <thead className="text-xs uppercase bg-zinc-800 text-gray-400">
             <tr>
