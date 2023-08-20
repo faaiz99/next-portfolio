@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Home:React.FC = () => {
     return (<>
-        <div data-testid='home' className="mt-12 mb-12 justify-around space-x-4 p-2">
+        <div data-testid='home' className=" mt-12 mb-12 justify-around space-x-4 p-2">
             <p className="text-center text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">Intro</p>
         </div>
         <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2" id="intro">

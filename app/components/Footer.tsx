@@ -5,16 +5,16 @@ const Footer:React.FC = () => {
                
                 <ul className="flex text-sm font-semibold text-zinc-400">
                     <li>
-                        <a href="https://www.linkedin.com/in/faaiz-aslam" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/faaiz-aslam" target="_blank"  className=" mr-4 text-center text-sm text-zinc-400 font-semibold hover:text-green-500 ">LinkedIn</a>
                     </li>
                     <li>
-                        <a href="https://github.com/faaiz99" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Github</a>
+                        <a href="https://github.com/faaiz99" target="_blank" className=" mr-4 text-center text-sm text-zinc-400 font-semibold hover:text-green-500 ">Github</a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/commander2811" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Twitter</a>
+                        <a href="https://twitter.com/commander2811" target="_blank" className=" mr-4 text-center text-sm text-zinc-400 font-semibold hover:text-green-500 ">Twitter</a>
                     </li>
                     <li>
-                        <a href="https://stackoverflow.com/users/12505891/faaiz-aslam" target="_blank" className="mr-4 hover:text-zinc-200 hover:underline">Stack Overflow</a>
+                        <a href="https://stackoverflow.com/users/12505891/faaiz-aslam" target="_blank" className=" mr-4 text-center text-sm text-zinc-400 font-semibold hover:text-green-500">Stack Overflow</a>
                     </li>
                 </ul>
 
