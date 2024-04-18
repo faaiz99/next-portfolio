@@ -88,6 +88,11 @@ jobs:
         with:
           path: ./out
 
+  # Component Tests
+  
+  test:
+    uses: ./.github/workflows/test.yml
+  
   # Deployment job
   deploy:
     environment:
@@ -99,3 +104,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+    
