@@ -23,7 +23,7 @@ export const getUserFromGH = async (): Promise<boolean> => {
   } catch (error) {
     console.log(error);
   }
-  return true
+  return true;
 };
 
 export const transformUser = async (
@@ -70,10 +70,9 @@ export const insertUserToDB = async (user: User): Promise<boolean> => {
     })
     .eq("id", id);
   if (error) {
-      return false
+    return false;
   }
-  return true
-
+  return true;
 };
 
 // Repositories
@@ -92,7 +91,7 @@ export const getReposFromGH = async (): Promise<boolean> => {
   } catch (error) {
     console.log(error);
   }
-  return true
+  return true;
 };
 export const transformRepo = async (
   repos: OctokitResponse<any>,
@@ -126,7 +125,6 @@ export const transformRepo = async (
   await insertReposToDB(mappedRepos as Repo[]);
 };
 export const insertReposToDB = async (repos: Repo[]): Promise<void> => {
-  const { data} = await supabase.from("repos").upsert(repos);
-  if (data)
-    console.log('Data updated', data)
+  const { data } = await supabase.from("repos").upsert(repos);
+  if (data) console.log("Data updated", data);
 };

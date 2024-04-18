@@ -4,9 +4,9 @@ import { getUserFromGH } from "../../helper/github.helper";
 
 export async function GET() {
   try {
-    const Repo =  await getReposFromGH();
+    const Repo = await getReposFromGH();
     const User = await getUserFromGH();
-    if(Repo && User ){
+    if (Repo && User) {
       return NextResponse.json(
         { message: "User/Repos fetched and updated" },
         {
