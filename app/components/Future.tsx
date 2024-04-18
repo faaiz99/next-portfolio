@@ -116,7 +116,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              Get a Master's Degree
+              Get a Master&apos;s Degree
             </li>
           </ul>
           <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">
@@ -177,7 +177,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              ORM's
+              ORM&apos;s
             </li>
             <li className="flex items-center">
               <svg

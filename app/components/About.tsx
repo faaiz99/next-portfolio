@@ -9,7 +9,7 @@ const About: React.FC = () => {
           className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl"
           id="about"
         >
-          What I've
+          What I&apos;ve
           <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">
             {" "}
             done{" "}

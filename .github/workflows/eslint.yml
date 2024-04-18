@@ -42,7 +42,7 @@ jobs:
 
       - name: Run Eslint
         run: npm run lint
-  prettier: 
+  prettier:
     name: Run prettier scanning
     runs-on: ubuntu-latest
     permissions:

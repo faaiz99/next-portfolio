@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { octokit } from "./gh.helper";
 import { OctokitResponse } from "@octokit/types";
 import { supabase } from "./db.helper";

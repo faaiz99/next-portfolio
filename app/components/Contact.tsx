@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
     <>
       <div className="mt-12 mb-12" data-testid="contact">
         <p className="text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl">
-          Let's
+          Let&apos;s
           <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">
             {" "}
             Connect
