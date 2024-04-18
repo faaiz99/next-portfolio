@@ -60,7 +60,7 @@ jobs:
 
       - name: Install Prettier
         run: |
-          npm install prettier@2.4.1
+          npm install prettier@3.2.5
 
       - name: Run Prettier
         run: npm run format
