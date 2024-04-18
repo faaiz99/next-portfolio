@@ -1,4 +1,4 @@
-export default interface Repos {
+export default interface Repo {
   id: number;
   name: string;
   html_url: string;
@@ -8,4 +8,4 @@ export default interface Repos {
   updated_at: string;
   forks_count: number;
   open_issues_count: number;
-}
+}[]

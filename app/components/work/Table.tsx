@@ -4,21 +4,23 @@ import { supabase } from "../../helper/db.helper";
 import Repo from "../../Types/Repos";
 
 const getRepos = async (range: number, init: number = 0): Promise<Repo[]> => {
-  const { data: repos, error } = await supabase
+  const { data, error } = await supabase
     .from("repos")
     .select("*")
     .range(init, range - 1);
   if (error) console.log("error while fetching repos:", error);
-  return repos as Repo[];
+  return data as Repo[];
 };
 
 const getTotalRepos = async (): Promise<number> => {
-  const { data: repos, error } = await supabase
+  const { count, error } = await supabase
     .from("repos")
     .select("id", { count: "exact" });
-  if (error) console.log(error);
-  const length: number | undefined = repos?.length;
-  return length as number;
+  if (error) {
+    console.error("Error fetching repository count:", error);
+    return 0;
+  }
+  return count || 0;
 };
 
 const Table: React.FC = () => {
@@ -28,7 +30,7 @@ const Table: React.FC = () => {
   const [page, setPage] = useState<number>(1);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [totalRepos, setTotalRepos] = useState<number>(0);
-
+  
   useEffect(() => {
     async function populateData() {
       const reposData = await getRepos(range);
@@ -42,31 +44,31 @@ const Table: React.FC = () => {
   }, [range]);
 
   const handlePagination = async (
-    serial: number,
+    pageNumber: number,
     action: string,
   ): Promise<void> => {
-    if (page >= 1) {
-      setDisabled(false);
-      if (action === "inc" && page <= totalRepos / range) {
-        console.log(action + page);
-        setPage(page + 1);
-        const next = serial * range;
-        const prev = serial * range - range;
-
-        const reposData = await getRepos(next, prev);
-        setOriginalRepos(reposData);
-        setRepos(reposData);
-      } else if (action === "dec" && page !== 1) {
-        setPage(page - 1);
-        const next = serial * range;
-        const prev = serial * range - range;
-
-        const reposData = await getRepos(next, prev);
-        setOriginalRepos(reposData);
-        setRepos(reposData);
-      }
-    } else {
+    if (page < 1) {
       setDisabled(true);
+      return;
+    }
+  
+    setDisabled(false);
+    let newPage = page;
+  
+    if (action === "inc" && page <= totalRepos / range) {
+      newPage = page + 1;
+    } else if (action === "dec" && page !== 1) {
+      newPage = page - 1;
+    }
+  
+    if (newPage !== page) {
+      setPage(newPage);
+      const next = pageNumber * range;
+      const prev = pageNumber * range - range;
+  
+      const reposData = await getRepos(next, prev);
+      setOriginalRepos(reposData);
+      setRepos(reposData);
     }
   };
   const handleSearch = (searchKey: string): void => {
@@ -74,8 +76,8 @@ const Table: React.FC = () => {
       setRepos(originalRepos); // Reset to the original repos list
       return;
     }
-    const filteredRepos: Repo[] = repos.filter((repo) =>
-      repo.name.toLowerCase().includes(searchKey.toLowerCase()),
+    const filteredRepos: Repo[] = repos.filter(({ name }) =>
+      name.toLowerCase().includes(searchKey.toLowerCase()),
     );
     setRepos(filteredRepos);
   };
