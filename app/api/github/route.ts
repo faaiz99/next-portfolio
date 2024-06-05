@@ -3,14 +3,20 @@ import { processGHData } from "../../helper/github.helper";
 export async function GET() {
   try {
     const result = await processGHData();
-    if (result) { // Add more specific checks if necessary
-      return NextResponse.json( 
-        { message: "User & Repos fetched and updated", operation: result},
+    if (!result) { // Add more specific checks if necessary
+      return NextResponse.json(
+        { message: "No data was fetched and updated", operation: false },
         {
-          status: 200,
+          status: 204,
         },
       );
-    }
+    } return NextResponse.json( 
+      { message: "User & Repos fetched and updated", operation: result},
+      {
+        status: 200,
+      },
+    );
+    
   } catch (error: any) {
     return NextResponse.json(
       {
