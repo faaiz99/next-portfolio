@@ -1,4 +1,4 @@
-export default interface Repo {
+export interface Repo {
   id: number;
   name: string;
   html_url: string;
@@ -8,4 +8,8 @@ export default interface Repo {
   updated_at: string;
   forks_count: number;
   open_issues_count: number;
+}
+
+export interface RepoResponse {
+  data: Repo[]
 }[]

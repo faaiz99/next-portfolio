@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../helper/db.helper";
-import Repo from "../../Types/Repos";
+import {Repo} from "../../Types/Repos";
 
 const getRepos = async (range: number, init: number = 0): Promise<Repo[]> => {
   const { data, error } = await supabase

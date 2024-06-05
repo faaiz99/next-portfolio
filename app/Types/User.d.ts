@@ -1,4 +1,4 @@
-export default interface User {
+export  interface User {
   login: string;
   id: number;
   avatar_url: string;
@@ -7,4 +7,8 @@ export default interface User {
   following: number;
   created_at: string;
   updated_at: string;
+}
+
+export interface UserResponse {
+  data: User
 }
