@@ -14,6 +14,7 @@ on:
     branches: ["development","main"]
   pull_request:
     # The branches below must be a subset of the branches above
+    types: [opened, reopened, synchronize]
     branches: ["main"]
   schedule:
     - cron: "35 8 * * 2"
