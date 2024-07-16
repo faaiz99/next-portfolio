@@ -14,7 +14,7 @@ on:
     branches: ["main"]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: ["main"]
+    branches: ["development", "main"]
   schedule:
     - cron: "35 8 * * 2"
 
@@ -37,7 +37,7 @@ jobs:
 
       - name: Install ESLint
         run: |
-          npm install eslint@8.0.0
+          npm install eslint@9.7.0
           npm install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run Eslint
@@ -60,7 +60,7 @@ jobs:
 
       - name: Install Prettier
         run: |
-          npm install prettier@3.2.5
+          npm install prettier@3.3.3
 
       - name: Run Prettier
         run: npm run prettier
