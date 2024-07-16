@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { processGHData } from "../../helper/github.helper";
-export const dynamic = 'force-dynamic'; // static by default, unless reading the request
 
 export async function GET() {
   try {
