@@ -4,7 +4,7 @@ import { processGHData } from "../../helper/github.helper";
 export async function GET() {
   try {
     const result = await processGHData();
-    if (!result) { // Add more specific checks if necessary
+    if (!result) {
       return NextResponse.json(
         { message: "No data was fetched and updated", operation: false },
         {
