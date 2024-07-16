@@ -9,31 +9,20 @@
           "informationUri": "https://eslint.org",
           "rules": [
             {
-              "id": "no-mixed-spaces-and-tabs",
-              "helpUri": "https://eslint.org/docs/latest/rules/no-mixed-spaces-and-tabs",
-              "properties": {},
+              "id": "react/no-unescaped-entities",
+              "helpUri": "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-unescaped-entities.md",
+              "properties": {
+                "category": "Possible Errors"
+              },
               "shortDescription": {
-                "text": "Disallow mixed spaces and tabs for indentation"
-              }
-            },
-            {
-              "id": "@typescript-eslint/no-explicit-any",
-              "helpUri": "https://typescript-eslint.io/rules/no-explicit-any",
-              "properties": {},
-              "shortDescription": {
-                "text": "Disallow the `any` type"
+                "text": "Disallow unescaped HTML entities from appearing in markup"
               }
             }
           ],
-          "version": "8.52.0"
+          "version": "8.57.0"
         }
       },
       "artifacts": [
-        {
-          "location": {
-            "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js"
-          }
-        },
         {
           "location": {
             "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/Types/Repos.d.ts"
@@ -171,6 +160,11 @@
         },
         {
           "location": {
+            "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/next-env.d.ts"
+          }
+        },
+        {
+          "location": {
             "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/next.config.js"
           }
         },
@@ -194,440 +188,361 @@
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/About.tsx",
+                  "index": 4
                 },
                 "region": {
-                  "startLine": 3,
-                  "startColumn": 1,
-                  "endLine": 3,
-                  "endColumn": 3
+                  "startLine": 12,
+                  "startColumn": 17
                 }
               }
             }
           ],
-          "ruleId": "no-mixed-spaces-and-tabs",
+          "ruleId": "react/no-unescaped-entities",
           "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Contact.tsx",
+                  "index": 5
                 },
                 "region": {
-                  "startLine": 4,
-                  "startColumn": 1,
-                  "endLine": 4,
-                  "endColumn": 3
+                  "startLine": 48,
+                  "startColumn": 14
                 }
               }
             }
           ],
-          "ruleId": "no-mixed-spaces-and-tabs",
+          "ruleId": "react/no-unescaped-entities",
           "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Future.tsx",
+                  "index": 7
                 },
                 "region": {
-                  "startLine": 7,
-                  "startColumn": 1,
-                  "endLine": 7,
-                  "endColumn": 3
+                  "startLine": 119,
+                  "startColumn": 27
                 }
               }
             }
           ],
-          "ruleId": "no-mixed-spaces-and-tabs",
+          "ruleId": "react/no-unescaped-entities",
           "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Future.tsx",
+                  "index": 7
                 },
                 "region": {
-                  "startLine": 8,
-                  "startColumn": 1,
-                  "endLine": 8,
-                  "endColumn": 3
+                  "startLine": 180,
+                  "startColumn": 18
                 }
               }
             }
           ],
-          "ruleId": "no-mixed-spaces-and-tabs",
+          "ruleId": "react/no-unescaped-entities",
           "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Home.tsx",
+                  "index": 8
                 },
                 "region": {
-                  "startLine": 9,
-                  "startColumn": 1,
-                  "endLine": 9,
-                  "endColumn": 3
+                  "startLine": 28,
+                  "startColumn": 49
                 }
               }
             }
           ],
-          "ruleId": "no-mixed-spaces-and-tabs",
+          "ruleId": "react/no-unescaped-entities",
           "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Mixed spaces and tabs."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 1,
-                  "endLine": 10,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 1,
-                  "endLine": 14,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 1,
-                  "endLine": 15,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 1,
-                  "endLine": 19,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 20,
-                  "startColumn": 1,
-                  "endLine": 20,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1,
-                  "endLine": 21,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Mixed spaces and tabs."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/.eslintrc.js",
-                  "index": 0
-                },
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 1,
-                  "endLine": 22,
-                  "endColumn": 3
-                }
-              }
-            }
-          ],
-          "ruleId": "no-mixed-spaces-and-tabs",
-          "ruleIndex": 0
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Unexpected any. Specify a different type."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/helper/github.helper.ts",
-                  "index": 18
-                },
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 29,
-                  "endLine": 11,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "ruleId": "@typescript-eslint/no-explicit-any",
-          "ruleIndex": 1,
-          "suppressions": [
-            {
-              "kind": "inSource",
-              "justification": ""
-            }
-          ]
-        },
-        {
-          "level": "error",
-          "message": {
-            "text": "Unexpected any. Specify a different type."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/helper/github.helper.ts",
-                  "index": 18
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Home.tsx",
+                  "index": 8
                 },
                 "region": {
                   "startLine": 30,
-                  "startColumn": 25,
-                  "endLine": 30,
-                  "endColumn": 28
+                  "startColumn": 14
                 }
               }
             }
           ],
-          "ruleId": "@typescript-eslint/no-explicit-any",
-          "ruleIndex": 1,
-          "suppressions": [
-            {
-              "kind": "inSource",
-              "justification": ""
-            }
-          ]
+          "ruleId": "react/no-unescaped-entities",
+          "ruleIndex": 0
         },
         {
           "level": "error",
           "message": {
-            "text": "Unexpected any. Specify a different type."
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Home.tsx",
+                  "index": 8
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 51
+                }
+              }
+            }
+          ],
+          "ruleId": "react/no-unescaped-entities",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Home.tsx",
+                  "index": 8
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 57
+                }
+              }
+            }
+          ],
+          "ruleId": "react/no-unescaped-entities",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "`'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/components/Home.tsx",
+                  "index": 8
+                },
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 22
+                }
+              }
+            }
+          ],
+          "ruleId": "react/no-unescaped-entities",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Definition for rule '@typescript-eslint/no-explicit-any' was not found."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
                   "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/helper/github.helper.ts",
-                  "index": 18
+                  "index": 17
                 },
                 "region": {
-                  "startLine": 81,
-                  "startColumn": 30,
-                  "endLine": 81,
-                  "endColumn": 33
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 56
                 }
               }
             }
           ],
-          "ruleId": "@typescript-eslint/no-explicit-any",
-          "ruleIndex": 1,
-          "suppressions": [
-            {
-              "kind": "inSource",
-              "justification": ""
-            }
-          ]
+          "ruleId": "@typescript-eslint/no-explicit-any"
         },
         {
           "level": "error",
           "message": {
-            "text": "Unexpected any. Specify a different type."
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/helper/github.helper.ts",
-                  "index": 18
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/About.test.tsx",
+                  "index": 20
                 },
                 "region": {
-                  "startLine": 98,
-                  "startColumn": 26,
-                  "endLine": 98,
-                  "endColumn": 29
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
                 }
               }
             }
           ],
-          "ruleId": "@typescript-eslint/no-explicit-any",
-          "ruleIndex": 1,
-          "suppressions": [
-            {
-              "kind": "inSource",
-              "justification": ""
-            }
-          ]
+          "ruleId": "@typescript-eslint/no-unused-vars"
         },
         {
           "level": "error",
           "message": {
-            "text": "Unexpected any. Specify a different type."
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/helper/github.helper.ts",
-                  "index": 18
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/Contact.test.tsx",
+                  "index": 21
                 },
                 "region": {
-                  "startLine": 100,
-                  "startColumn": 28,
-                  "endLine": 100,
-                  "endColumn": 31
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
                 }
               }
             }
           ],
-          "ruleId": "@typescript-eslint/no-explicit-any",
-          "ruleIndex": 1,
-          "suppressions": [
+          "ruleId": "@typescript-eslint/no-unused-vars"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
+          },
+          "locations": [
             {
-              "kind": "inSource",
-              "justification": ""
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/Footer.test.tsx",
+                  "index": 22
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
+                }
+              }
             }
-          ]
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/Future.test.tsx",
+                  "index": 23
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/Github.test.tsx",
+                  "index": 24
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars"
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Definition for rule '@typescript-eslint/no-unused-vars' was not found."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Faaiz/Desktop/next-portfolio/app/tests/components/Home.test.tsx",
+                  "index": 25
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars"
         }
       ]
     }

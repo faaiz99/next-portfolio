@@ -34,3 +34,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.development
+.env.production
+eslint-results.sarif
+.vscode/launch.json
+eslint-results.sarif
