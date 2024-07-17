@@ -1,9 +1,13 @@
 name: Build and Test
 on: [push] # build on push only
 jobs:
-  test:
+  Lint-Format:
+    uses: "./.github/workflows/eslint.yml"
+
+  Test:
     uses: "./.github/workflows/test.yml"
-  deploy:
+    
+  Deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
