@@ -105,11 +105,11 @@ async function processGHData(): Promise<boolean> {
   try {
     const user = await getUserFromGH();
     const transformedUser = userMapper(user)
-    const isUserSuccess = await insertUserToDB(transformedUser);
+    await insertUserToDB(transformedUser);
 
     const repos = await getReposFromGH();
     const transformedRepos = reposMapper(repos)
-    const isRepoSuccess = await insertReposToDB(transformedRepos);
+    await insertReposToDB(transformedRepos);
   } catch (error: any) {
     return false
   }
