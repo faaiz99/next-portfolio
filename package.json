@@ -14,8 +14,8 @@
     "deploy": "vercel --prod",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "prettier": "npx prettier '**/*' !**/*.yml --write"  }
-,
+    "prettier": "npx prettier '**/*' !**/*.yml --write"
+  },
   "dependencies": {
     "@microsoft/eslint-formatter-sarif": "^2.1.7",
     "@octokit/rest": "^21.0.0",
