@@ -8,7 +8,7 @@ on:
     branches: ["main"]
 
 jobs:
-  Lint-Format:
+  Code-Quality-Checks:
     uses: "./.github/workflows/eslint.yml"
     permissions:
       contents: write
