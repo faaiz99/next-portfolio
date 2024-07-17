@@ -1,5 +1,5 @@
 name: deploy website
-on: [pull_request, push]
+on: [push] # build on push only
 jobs:
   deploy:
     runs-on: ubuntu-latest
