@@ -6,9 +6,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: amondnet/vercel-action@v25 #deploy
+      # Conditional deployment for development (preview) branches
+      - name: Deploy to Preview
+        if: github.ref != 'refs/heads/main'
+        uses: amondnet/vercel-action@v25
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-args: '' # You c if needed
+          working-directory: .
+      
+      # Conditional deployment for the main branch (production)
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-args: '--prod' # Deploy to production
           working-directory: .
