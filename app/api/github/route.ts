@@ -11,13 +11,13 @@ export async function GET() {
           status: 204,
         },
       );
-    } return NextResponse.json( 
-      { message: "User & Repos fetched and updated", operation: result},
+    }
+    return NextResponse.json(
+      { message: "User & Repos fetched and updated", operation: result },
       {
         status: 200,
       },
     );
-    
   } catch (error: any) {
     return NextResponse.json(
       {

@@ -1,4 +1,4 @@
-export  interface User {
+export interface User {
   login: string;
   id: number;
   avatar_url: string;
@@ -10,5 +10,5 @@ export  interface User {
 }
 
 export interface UserResponse {
-  data: User
+  data: User;
 }

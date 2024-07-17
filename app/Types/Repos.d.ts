@@ -11,5 +11,6 @@ export interface Repo {
 }
 
 export interface RepoResponse {
-  data: Repo[]
-}[]
+  data: Repo[];
+}
+[];

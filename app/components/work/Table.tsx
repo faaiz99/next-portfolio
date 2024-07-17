@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../helper/db.helper";
-import {Repo} from "../../Types/Repos";
+import { Repo } from "../../Types/Repos";
 
 const getRepos = async (range: number, init: number = 0): Promise<Repo[]> => {
   const { data, error } = await supabase
@@ -30,7 +30,7 @@ const Table: React.FC = () => {
   const [page, setPage] = useState<number>(1);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [totalRepos, setTotalRepos] = useState<number>(0);
-  
+
   useEffect(() => {
     async function populateData() {
       const reposData = await getRepos(range);
@@ -51,21 +51,21 @@ const Table: React.FC = () => {
       setDisabled(true);
       return;
     }
-  
+
     setDisabled(false);
     let newPage = page;
-  
+
     if (action === "inc" && page <= totalRepos / range) {
       newPage = page + 1;
     } else if (action === "dec" && page !== 1) {
       newPage = page - 1;
     }
-  
+
     if (newPage !== page) {
       setPage(newPage);
       const next = pageNumber * range;
       const prev = pageNumber * range - range;
-  
+
       const reposData = await getRepos(next, prev);
       setOriginalRepos(reposData);
       setRepos(reposData);

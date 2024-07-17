@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../helper/db.helper";
 import { Spinner } from "../Spinner";
-import {User} from "../../Types/User";
+import { User } from "../../Types/User";
 import Github from "./Github";
 
 const getUser = async (): Promise<User> => {
