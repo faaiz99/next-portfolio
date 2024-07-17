@@ -10,7 +10,10 @@ on:
 jobs:
   Lint-Format:
     uses: "./.github/workflows/eslint.yml"
-
+    permissions:
+      contents: write
+      security-events: write
+      actions: read
   Test:
     uses: "./.github/workflows/test.yml"
 
