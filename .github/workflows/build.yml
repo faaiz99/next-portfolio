@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: "./.github/workflows/test.yml"
+      - uses: "./github/workflows/test.yml"
         continue-on-error: true
   deploy:
     runs-on: ubuntu-latest
