@@ -1,12 +1,19 @@
-name: Build and Test
-on: [push] # build on push only
+name: Build and Deploy
+on:
+  workflow_call:
+  push:
+    branches: ["development", "main"]
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: ["main"]
+
 jobs:
   Lint-Format:
     uses: "./.github/workflows/eslint.yml"
 
   Test:
     uses: "./.github/workflows/test.yml"
-    
+
   Deploy:
     runs-on: ubuntu-latest
     steps:
