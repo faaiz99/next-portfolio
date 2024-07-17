@@ -1,14 +1,30 @@
-name: deploy website
-on: [push] # build on push only
+name: Build and Deploy
+on:
+  workflow_call:
+  push:
+    branches: ["development", "main"]
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: ["main"]
+
 jobs:
-  deploy:
+  Code-Quality-Checks:
+    uses: "./.github/workflows/eslint.yml"
+    permissions:
+      contents: write
+      security-events: write
+      actions: read
+  Test:
+    uses: "./.github/workflows/test.yml"
+
+  Deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       # Conditional deployment for development (preview) branches
       - name: Deploy to Preview
-        if: github.ref != 'refs/heads/main'
+        if: github.ref == 'refs/heads/development'
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

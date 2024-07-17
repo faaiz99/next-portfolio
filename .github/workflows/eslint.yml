@@ -1,13 +1,12 @@
 name: Code Quality Checks
 
 on:
-  push:
-    branches: ["development", "main"]
-  pull_request:
-    types: [opened, reopened, synchronize]
-    branches: ["main"]
-  schedule:
-    - cron: "35 8 * * 2"
+  workflow_call:
+  # push:
+  #   branches: ["development", "main"]
+  # pull_request:
+  #   types: [opened, reopened, synchronize]
+  #   branches: ["main"]
 
 jobs:
   code-quality:

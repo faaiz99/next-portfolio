@@ -1,10 +1,10 @@
-name: Tests
+name: Test
 
 on:
   workflow_call:
 
 jobs:
-  vitest:
+  Vitest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
