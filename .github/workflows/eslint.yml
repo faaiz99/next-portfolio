@@ -1,32 +1,22 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# ESLint is a tool for identifying and reporting on patterns
-# found in ECMAScript/JavaScript code.
-# More details at https://github.com/eslint/eslint
-# and https://eslint.org
-
-name: ESLint
+name: Code Quality Checks
 
 on:
   push:
-    branches: ["development","main"]
+    branches: ["development", "main"]
   pull_request:
-    # The branches below must be a subset of the branches above
     types: [opened, reopened, synchronize]
     branches: ["main"]
   schedule:
     - cron: "35 8 * * 2"
 
 jobs:
-  eslint:
-    name: Run eslint scanning
+  code-quality:
+    name: Run ESLint and Prettier
     runs-on: ubuntu-latest
     permissions:
       contents: write
       security-events: write
-      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+      actions: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,46 +28,20 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install ESLint
+      - name: Install dependencies
         run: |
           npm install eslint@8.51.0
           npm install @microsoft/eslint-formatter-sarif@2.1.7
-
-      - name: Run Eslint
-        run: npm run lint
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Apply linting changes
-          branch: ${{ github.head_ref }}
-  prettier:
-    name: Run prettier scanning
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      security-events: write
-      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install Prettier
-        run: |
           npm install prettier@3.3.3
+
+      - name: Run ESLint
+        run: npm run lint
 
       - name: Run Prettier
         run: npm run prettier
-          
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Apply formatting changes
+          commit_message: Apply code quality changes
           branch: ${{ github.head_ref }}
