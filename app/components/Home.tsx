@@ -27,16 +27,16 @@ const Home: React.FC = () => {
           <p className=" text-justify font-normal break-normal text-zinc-400">
             Hello, Welcome to my portfolio, here&apos;s my brief introduction{" "}
             <br></br>
-            I&apos;m a 8th semester student @ COMSATS A self-motivated programmer
-            with a passion to learn new things by experimenting. I look forward
-            to get hands-on experience with test driven (TDD) as well as
-            behaviour driven development (BDD) to build solutions that are
-            robust and scalable. The portfolio starts off with my introduction,
-            followed by my future plans and what I&apos;ve done including my
-            education and technical skills. After that I&apos;ve used GitHub API to
-            present a statistical and tabular view of my repositories. At the
-            end there&apos;s a form that you can fill to have detailed converstion
-            with me. Thank you!
+            I&apos;m a 8th semester student @ COMSATS A self-motivated
+            programmer with a passion to learn new things by experimenting. I
+            look forward to get hands-on experience with test driven (TDD) as
+            well as behaviour driven development (BDD) to build solutions that
+            are robust and scalable. The portfolio starts off with my
+            introduction, followed by my future plans and what I&apos;ve done
+            including my education and technical skills. After that I&apos;ve
+            used GitHub API to present a statistical and tabular view of my
+            repositories. At the end there&apos;s a form that you can fill to
+            have detailed converstion with me. Thank you!
           </p>
         </div>
       </div>
