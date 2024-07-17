@@ -38,11 +38,14 @@ jobs:
         run: |
           set -e
           npm run lint
+        continue-on-error: false
+
 
       - name: Run Prettier
         run: |
           set -e
           npm run prettier
+        continue-on-error: false
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
