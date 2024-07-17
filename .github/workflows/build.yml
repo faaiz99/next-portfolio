@@ -1,6 +1,11 @@
-name: deploy website
+name: Build and Test
 on: [push] # build on push only
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "./.github/workflows/test.yml"
+        continue-on-error: true
   deploy:
     runs-on: ubuntu-latest
     steps:
