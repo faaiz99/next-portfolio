@@ -8,7 +8,7 @@ jobs:
 
       # Conditional deployment for development (preview) branches
       - name: Deploy to Preview
-        if: github.ref != 'refs/heads/main'
+        if: github.ref == 'refs/heads/development'
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
