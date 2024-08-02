@@ -17,6 +17,7 @@ vi.mock("@supabase/supabase-js", () => {
   };
 });
 
+
 describe("Contact ", () => {
   it("Should Render", () => {
     render(<Contact />);
