@@ -138,10 +138,12 @@ const Contact: React.FC = () => {
                       value={values.name}
                       name="name"
                       id="name"
-                      className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block  p-2.5 "
-                      placeholder="Sample Name"
+                      className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block  p-2.5 "
+                      placeholder="Valid Name"
                     ></input>
+                    <div className="text-red-500 text-sm p-1">
                     <ErrorMessage name="name" />
+                    </div>
                   </div>
                   <div className="mb-4">
                     <label
@@ -157,10 +159,14 @@ const Contact: React.FC = () => {
                       type="email"
                       name="email"
                       id="email"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "
-                      placeholder="Sample@email.com"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5  "
+                      placeholder="Valid@email.com"
                     ></input>
-                    <ErrorMessage name="email" />
+                                        <div className="text-red-500 text-sm p-1">
+
+                                        <ErrorMessage name="email" />
+
+                    </div>
                   </div>
 
                   <div className="mb-4">
@@ -176,10 +182,12 @@ const Contact: React.FC = () => {
                       onBlur={handleBlur}
                       value={values.message}
                       rows={4}
-                      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                      placeholder="Write your thoughts here..."
+                      className="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
+                      placeholder="Your thoughts here..."
                     ></textarea>
-                    <ErrorMessage name="message" />
+                    <div className="text-red-500 text-sm p-1">
+                    <ErrorMessage name="message" /> 
+                    </div>
                   </div>
 
                   <div className="mt-6 flex justify-start">
