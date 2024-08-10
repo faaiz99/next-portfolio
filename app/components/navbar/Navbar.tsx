@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Navbar: React.FC = () => {
   return (
     <div className="flex flex-row justify-between py-2 px-4 ">
