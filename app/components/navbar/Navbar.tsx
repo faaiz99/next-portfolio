@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
     <div className="flex flex-row justify-between py-2 px-4 ">
       <Image
         className="mt-2"
-        src="/coding.png"
+        src="/assets/coding.png"
         width={20}
         height={20}
         alt="Coding Logo"

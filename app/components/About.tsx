@@ -1,3 +1,5 @@
+import GreenTick from "./shared/GreenTick";
+
 const About: React.FC = () => {
   return (
     <>
@@ -31,7 +33,7 @@ const About: React.FC = () => {
             <li className="mb-10 ml-4">
               <div className="absolute w-3 h-3 bg-green-500 rounded-full mt-1.5 -left-1.5 border border-green-700 "></div>
               <time className="mb-1 text-sm font-normal leading-none text-zinc-400 ">
-                February 2020 - Present{" "}
+                February 2020 - February 2024{" "}
               </time>
               <h3 className="text-lg font-semibold text-zinc-200 ">
                 BS Computer Science, COMSATS University Islamabad
@@ -329,7 +331,7 @@ const About: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              Jest
+              Jest/Vitest
             </li>
             <li className="flex items-center">
               <svg
@@ -352,18 +354,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               MongoDB
             </li>
             <li className="flex items-center">
@@ -394,7 +385,22 @@ const About: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              SupaBase
+              Supabase
+            </li>
+            <li className="flex items-center">
+              <svg
+                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              Firebase
             </li>
           </ul>
           <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">
@@ -415,51 +421,6 @@ const About: React.FC = () => {
                 ></path>
               </svg>
               Docker
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Kubernetes
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Jenkins
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              AWS
             </li>
           </ul>
         </div>

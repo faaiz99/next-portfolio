@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                   <div className="mb-4">
                     <label
                       htmlFor="name"
-                      className=" block mb-2 text-sm font-medium text-white"
+                      className=" block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Name
                     </label>
@@ -138,15 +138,17 @@ const Contact: React.FC = () => {
                       value={values.name}
                       name="name"
                       id="name"
-                      className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block  p-2.5 "
-                      placeholder="Sample Name"
+                      className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block  p-2.5 "
+                      placeholder="Your awesome name"
                     ></input>
-                    <ErrorMessage name="name" />
+                    <div className="text-red-500 text-sm p-1">
+                      <ErrorMessage name="name" />
+                    </div>
                   </div>
                   <div className="mb-4">
                     <label
                       htmlFor="email"
-                      className=" w-full  block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Email
                     </label>
@@ -157,16 +159,18 @@ const Contact: React.FC = () => {
                       type="email"
                       name="email"
                       id="email"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "
-                      placeholder="Sample@email.com"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5  "
+                      placeholder="your@email.com"
                     ></input>
-                    <ErrorMessage name="email" />
+                    <div className="text-red-500 text-sm p-1">
+                      <ErrorMessage name="email" />
+                    </div>
                   </div>
 
                   <div className="mb-4">
                     <label
                       htmlFor="message"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Your message
                     </label>
@@ -176,10 +180,12 @@ const Contact: React.FC = () => {
                       onBlur={handleBlur}
                       value={values.message}
                       rows={4}
-                      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                      placeholder="Write your thoughts here..."
+                      className="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
+                      placeholder="Your thoughts here..."
                     ></textarea>
-                    <ErrorMessage name="message" />
+                    <div className="text-red-500 text-sm p-1">
+                      <ErrorMessage name="message" />
+                    </div>
                   </div>
 
                   <div className="mt-6 flex justify-start">
@@ -203,7 +209,7 @@ const Contact: React.FC = () => {
             </p>
             <p className=" block mb-2 text-sm font-medium text-white">
               {" "}
-              +92332711471
+              (+92) 332711471
             </p>
             <p className=" block mb-2 text-sm font-medium text-zinc-300">
               Email
