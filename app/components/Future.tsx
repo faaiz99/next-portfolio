@@ -164,7 +164,7 @@ export const Future: React.FC = () => {
               </svg>
               Unit Testing
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center line-through">
               <svg
                 className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
                 fill="currentColor"
@@ -207,7 +207,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              Agile Principles
+              Cloud Platforms
             </li>
             <li className="flex items-center">
               <svg
@@ -222,7 +222,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              Load Balacing
+              Load Balacing (Nginx)
             </li>
             <li className="flex items-center">
               <svg
@@ -237,7 +237,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              Deploying Microservices
+              Microservices
             </li>
             <li className="flex items-center">
               <svg
@@ -252,7 +252,7 @@ export const Future: React.FC = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-              tRPC
+              Golang
             </li>
             <li className="flex items-center">
               <svg

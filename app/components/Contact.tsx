@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                   <div className="mb-4">
                     <label
                       htmlFor="name"
-                      className=" block mb-2 text-sm font-medium text-white"
+                      className=" block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Name
                     </label>
@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
                       name="name"
                       id="name"
                       className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block  p-2.5 "
-                      placeholder="Valid Name"
+                      placeholder="Your awesome name"
                     ></input>
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="name" />
@@ -148,7 +148,7 @@ const Contact: React.FC = () => {
                   <div className="mb-4">
                     <label
                       htmlFor="email"
-                      className=" w-full  block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Email
                     </label>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                       name="email"
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5  "
-                      placeholder="Valid@email.com"
+                      placeholder="your@email.com"
                     ></input>
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="email" />
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                   <div className="mb-4">
                     <label
                       htmlFor="message"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-zinc-300"
                     >
                       Your message
                     </label>
@@ -209,7 +209,7 @@ const Contact: React.FC = () => {
             </p>
             <p className=" block mb-2 text-sm font-medium text-white">
               {" "}
-              +92332711471
+              (+92) 332711471
             </p>
             <p className=" block mb-2 text-sm font-medium text-zinc-300">
               Email
