@@ -354,7 +354,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-              <GreenTick />
+                <GreenTick />
               MongoDB
             </li>
             <li className="flex items-center">
