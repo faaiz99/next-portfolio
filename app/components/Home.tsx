@@ -27,13 +27,14 @@ const Home: React.FC = () => {
           <p className=" text-justify font-normal break-normal text-zinc-400">
             Hello Visitor, Welcome to my site, here&apos;s my brief introduction{" "}
             <br></br>
-            I&apos;m a A self-motivated
-            Software Engineer with a passion to learn new things by experimenting. I
-            pratice test driven (TDD) to build solutions that
-            are robust and scalable ensuring that my clients get bug-free code. 
-            The site starts off with my introduction, followed by my future plans and what I&apos;ve done
-            including my education and technical skills. This is my technical workspace where I try & build stuff. At the end there&apos;s a form that you can fill to
-            have detailed converstion with me. Thank you!
+            I&apos;m a A self-motivated Software Engineer with a passion to
+            learn new things by experimenting. I pratice test driven (TDD) to
+            build solutions that are robust and scalable ensuring that my
+            clients get bug-free code. The site starts off with my introduction,
+            followed by my future plans and what I&apos;ve done including my
+            education and technical skills. This is my technical workspace where
+            I try & build stuff. At the end there&apos;s a form that you can
+            fill to have detailed converstion with me. Thank you!
           </p>
         </div>
       </div>
