@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       >
         <div className=" hover:shadow-lg  hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96  sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
           <Image
-            src="/./faaiz.jpeg"
+            src="/assets/faaiz.jpeg"
             loading="lazy"
             className="h-auto w-auto border-2 border-green-500 rounded-full"
             alt="picture of faaiz"
