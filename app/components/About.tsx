@@ -65,13 +65,11 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Topics in Computer Science I
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Topics in Computer Science II
             </li>
             <li className="flex items-center">
@@ -90,13 +88,11 @@ const About: React.FC = () => {
               Web Technologies
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Mobile App Development
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Database Systems
             </li>
           </ul>
@@ -105,8 +101,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               SIC - Artificial Intelligence
             </li>
           </ul>
@@ -117,8 +112,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               ReactJS
             </li>
             <li className="flex items-center">
@@ -182,8 +176,7 @@ const About: React.FC = () => {
               ExpressJS
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               NestJS
             </li>
           </ul>
@@ -192,8 +185,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               JavaScript
             </li>
             <li className="flex items-center">
@@ -217,8 +209,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Ubuntu
             </li>
           </ul>
@@ -229,13 +220,11 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Jest/Vitest
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Selenium
             </li>
           </ul>
@@ -248,8 +237,7 @@ const About: React.FC = () => {
               MongoDB
             </li>
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               PostgreSQL
             </li>
             <li className="flex items-center">
@@ -288,8 +276,7 @@ const About: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                           <GreenTick />
-
+              <GreenTick />
               Docker
             </li>
           </ul>
