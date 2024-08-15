@@ -5,10 +5,10 @@ import { Repo } from "../../Types/Repos";
 
 type Response = {
   data: {
-    repos: Repo[],
-    totalRepos: number
-  }
-}
+    repos: Repo[];
+    totalRepos: number;
+  };
+};
 
 const Table: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
@@ -19,17 +19,19 @@ const Table: React.FC = () => {
   const [disabled, setDisabled] = useState<boolean>(false);
   const [totalRepos, setTotalRepos] = useState<number>(0);
 
-
-  const fetchRepositories = async (start: number, range: number): Promise<Response> => {
+  const fetchRepositories = async (
+    start: number,
+    range: number,
+  ): Promise<Response> => {
     const response = await fetch("/api/repositories", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ start, range }),
-    })
-    return response.json()
-  }
+    });
+    return response.json();
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,22 +56,22 @@ const Table: React.FC = () => {
       setDisabled(true);
       return;
     }
-  
+
     setDisabled(false);
     let newPage = page;
-  
+
     if (action === "inc" && page < Math.ceil(totalRepos / range)) {
       newPage = page + 1;
     } else if (action === "dec" && page > 1) {
       newPage = page - 1;
     }
-  
+
     if (newPage === page) {
       return;
     }
     setPage(newPage);
     const start = (newPage - 1) * range;
-  
+
     try {
       const response = await fetchRepositories(start, range);
       setOriginalRepos(response.data.repos);
@@ -105,8 +107,10 @@ const Table: React.FC = () => {
         <div className="flex">
           {" "}
           Show
-          <label htmlFor="repos"
-          className="bg-zinc-400 flex text-sm font-medium t text-zinc-200" />
+          <label
+            htmlFor="repos"
+            className="bg-zinc-400 flex text-sm font-medium t text-zinc-200"
+          />
           <select
             id="repos"
             onChange={(e) => {

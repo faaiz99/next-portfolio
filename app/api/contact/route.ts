@@ -16,12 +16,28 @@ export async function POST(req: Request) {
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    return NextResponse.json({status:true, message: "success", time: new Date().getTime() }, { status: 201 });
+    return NextResponse.json(
+      { status: true, message: "success", time: new Date().getTime() },
+      { status: 201 },
+    );
   } catch (error) {
     return error instanceof Error
-      ? NextResponse.json({status:false, error: error.message, message:"failure", time: new Date().getTime()}, { status: 500 })
+      ? NextResponse.json(
+          {
+            status: false,
+            error: error.message,
+            message: "failure",
+            time: new Date().getTime(),
+          },
+          { status: 500 },
+        )
       : NextResponse.json(
-          { status:false, error: "An unknown error occurred", message:"failure", time: new Date().getTime() },
+          {
+            status: false,
+            error: "An unknown error occurred",
+            message: "failure",
+            time: new Date().getTime(),
+          },
           { status: 500 },
         );
   }
