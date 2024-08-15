@@ -16,7 +16,8 @@ export async function POST(req: Request) {
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    return NextResponse.redirect(req.url, 302);
+    // return NextResponse.redirect(req.url, 302);
+    return NextResponse.json({status:true, message:"Success" }, { status: 201 })
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
@@ -25,11 +26,4 @@ export async function POST(req: Request) {
           { status: 500 },
         );
   }
-}
-
-export async function GET() {
-  return NextResponse.json(
-    { status: true, message: "Contact 100%" },
-    { status: 200 },
-  );
 }
