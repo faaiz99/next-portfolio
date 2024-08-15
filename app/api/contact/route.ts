@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     if (error) throw error;
     if (!error) {
-      NextResponse.redirect(req.url, 302)
+      NextResponse.redirect(req.url, 302);
       return NextResponse.json(
         {
           status: true,
