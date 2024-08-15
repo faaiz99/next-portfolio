@@ -3,45 +3,48 @@ import React, { useEffect, useState } from "react";
 import { supabase } from "../../helper/db.helper";
 import { Repo } from "../../Types/Repos";
 
-const getRepos = async (range: number, init: number = 0): Promise<Repo[]> => {
-  const { data, error } = await supabase
-    .from("repos")
-    .select("*")
-    .range(init, range - 1);
-  if (error) console.log("error while fetching repos:", error);
-  return data as Repo[];
-};
-
-const getTotalRepos = async (): Promise<number> => {
-  const { count, error } = await supabase
-    .from("repos")
-    .select("id", { count: "exact" });
-  if (error) {
-    console.error("Error fetching repository count:", error);
-    return 0;
+type Response = {
+  data: {
+    repos: Repo[],
+    totalRepos: number
   }
-  return count || 0;
-};
+}
 
 const Table: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [range, setRange] = useState<number>(5);
+  const [start, setStart] = useState<number>(0);
   const [originalRepos, setOriginalRepos] = useState<Repo[]>([]);
   const [page, setPage] = useState<number>(1);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [totalRepos, setTotalRepos] = useState<number>(0);
 
+
+  const fetchRepositories = async (start: number, range: number): Promise<Response> => {
+    const response = await fetch("/api/repositories", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ start, range }),
+    })
+    return response.json()
+  }
+
   useEffect(() => {
-    async function populateData() {
-      const reposData = await getRepos(range);
-      const reposCount = await getTotalRepos();
-      setTotalRepos(reposCount);
-      setOriginalRepos(reposData);
-      setRepos(reposData);
-      setPage(1);
-    }
-    populateData();
-  }, [range]);
+    const fetchData = async () => {
+      try {
+        const res = await fetchRepositories(start, range);
+        setTotalRepos(res.data.totalRepos);
+        setRepos(res.data.repos);
+        setOriginalRepos(res.data.repos);
+        setPage(1);
+      } catch (error) {
+        console.error("Error fetching repositories");
+      }
+    };
+    fetchData();
+  }, [start, range]);
 
   const handlePagination = async (
     pageNumber: number,
@@ -51,33 +54,39 @@ const Table: React.FC = () => {
       setDisabled(true);
       return;
     }
-
+  
     setDisabled(false);
     let newPage = page;
-
-    if (action === "inc" && page <= totalRepos / range) {
+  
+    if (action === "inc" && page < Math.ceil(totalRepos / range)) {
       newPage = page + 1;
-    } else if (action === "dec" && page !== 1) {
+    } else if (action === "dec" && page > 1) {
       newPage = page - 1;
     }
-
-    if (newPage !== page) {
-      setPage(newPage);
-      const next = pageNumber * range;
-      const prev = pageNumber * range - range;
-
-      const reposData = await getRepos(next, prev);
-      setOriginalRepos(reposData);
-      setRepos(reposData);
+  
+    if (newPage === page) {
+      return;
+    }
+    setPage(newPage);
+    const start = (newPage - 1) * range;
+  
+    try {
+      const response = await fetchRepositories(start, range);
+      setOriginalRepos(response.data.repos);
+      setRepos(response.data.repos);
+    } catch (error) {
+      console.error("Error fetching repositories");
     }
   };
+
   const handleSearch = (searchKey: string): void => {
-    if (searchKey.trim() === "") {
-      setRepos(originalRepos); // Reset to the original repos list
+    const trimmedKey = searchKey.trim().toLowerCase();
+    if (!trimmedKey) {
+      setRepos(originalRepos);
       return;
     }
     const filteredRepos: Repo[] = repos.filter(({ name }) =>
-      name.toLowerCase().includes(searchKey.toLowerCase()),
+      name.toLowerCase().includes(trimmedKey),
     );
     setRepos(filteredRepos);
   };
@@ -96,10 +105,8 @@ const Table: React.FC = () => {
         <div className="flex">
           {" "}
           Show
-          <label
-            htmlFor="repos"
-            className="bg-zinc-400 flex text-sm font-medium t text-zinc-200"
-          ></label>
+          <label htmlFor="repos"
+          className="bg-zinc-400 flex text-sm font-medium t text-zinc-200" />
           <select
             id="repos"
             onChange={(e) => {
@@ -215,7 +222,9 @@ const Table: React.FC = () => {
           </tbody>
         </table>
       </div>
-      <div className="inline">
+
+      {/* TODO: Implement pagination */}
+      {/* <div className="inline">
         <div className="mt-4 space-x-8 flex justify-center">
           <button
             disabled={disabled}
@@ -238,9 +247,8 @@ const Table: React.FC = () => {
             Next
           </button>
         </div>
-      </div>
+      </div>  */}
     </>
   );
 };
-
 export default Table;
