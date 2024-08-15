@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import * as Yup from "yup";
 import Top from "./Top";
 
-export const runtime = 'edge'
+export const runtime = "edge";
 
 interface ContactFormValues {
   name: string;
