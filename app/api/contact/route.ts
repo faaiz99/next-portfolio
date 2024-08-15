@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "../../Types/Supabase";
 
@@ -9,6 +9,12 @@ const supabase = createClient<Database>(url, key, {
 });
 
 export async function POST(req: Request) {
+  if (req.method !== "POST") {
+    return Response.json(
+      { status: false, message: "Greetings! This Method Not Allowed" },
+      { status: 405 },
+    );
+  }
   try {
     const data = await req.json();
     const { name, email, message } = data.contact;
@@ -16,7 +22,7 @@ export async function POST(req: Request) {
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    return NextResponse.redirect(req.url, 302);
+    return NextResponse.json({ message: "success" }, { status: 201 });
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
