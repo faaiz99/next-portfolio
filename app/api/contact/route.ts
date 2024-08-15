@@ -8,10 +8,13 @@ const supabase = createClient<Database>(url, key, {
   auth: { persistSession: false },
 });
 
-export async function POST(req: Request){ 
-  if (req.method !== 'POST') {
-    return Response.json({status:false, message: "Greetings! This Method Not Allowed" }, { status: 405 });
-  } 
+export async function POST(req: Request) {
+  if (req.method !== "POST") {
+    return Response.json(
+      { status: false, message: "Greetings! This Method Not Allowed" },
+      { status: 405 },
+    );
+  }
   try {
     const data = await req.json();
     const { name, email, message } = data.contact;
@@ -19,7 +22,7 @@ export async function POST(req: Request){
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    return NextResponse.redirect(new URL('/', req.url))
+    return NextResponse.redirect(new URL("/", req.url));
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
