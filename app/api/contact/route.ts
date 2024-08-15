@@ -11,7 +11,7 @@ const supabase = createClient<Database>(url, key, {
 export async function POST(req: Request) {
 	try {
 		const data = await req.json()
-		const { name, email, message } = data;
+		const { name, email, message } = data.contact;
 		const { error } = await supabase
 			.from("messages")
 			.insert([{ name, email, message }]);
