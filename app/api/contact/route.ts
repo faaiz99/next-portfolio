@@ -21,7 +21,6 @@ export async function POST(req: NextRequest) {
       .replace(/\/$/, "")
       .replace(/\/$/, "");
     return NextResponse.redirect(url, 308);
-
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
