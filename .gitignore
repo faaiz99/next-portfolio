@@ -38,5 +38,4 @@ next-env.d.ts
 eslint-results.sarif
 .vscode/launch.json
 eslint-results.sarif
-package-lock.json
 .env.test
