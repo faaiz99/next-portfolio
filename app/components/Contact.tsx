@@ -1,24 +1,16 @@
 "use client";
-import { supabase } from "../helper/db.helper";
+
 import { Formik, ErrorMessage } from "formik";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Yup from "yup";
 import Top from "./Top";
 
-interface MessageFormValues {
+interface ContactFormValues {
   name: string;
   email: string;
   message: string;
 }
-
-const handleMessage = async (values: MessageFormValues) => {
-  const { name, email, message } = values;
-  const { error } = await supabase
-    .from("messages")
-    .insert([{ name: name, email: email, message: message }]);
-  if (error) console.log(error);
-};
 
 const messageSchema = Yup.object().shape({
   name: Yup.string()
@@ -32,8 +24,30 @@ const messageSchema = Yup.object().shape({
 });
 
 const Contact: React.FC = () => {
-  const initialValues: MessageFormValues = { name: "", email: "", message: "" };
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [contact, setContactForm] = useState<ContactFormValues>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    const sendMessage = async () => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contact,
+        }),
+      });
+      if (response.ok) {
+        setShowModal(true);
+      }
+    };
+    sendMessage();
+  }, [contact]);
 
   if (showModal === true) {
     setTimeout(() => {
@@ -101,11 +115,11 @@ const Contact: React.FC = () => {
         <div className="flex hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-8 rounded-3xl  h-auto w-auto  sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 gap-4">
           <div className="w-full justify-center ">
             <Formik
-              initialValues={initialValues}
+              initialValues={contact}
               validationSchema={messageSchema}
               onSubmit={async (values, actions) => {
                 actions.setSubmitting(false);
-                handleMessage(values);
+                setContactForm(values);
                 actions.resetForm({
                   values: {
                     name: "",
@@ -113,7 +127,6 @@ const Contact: React.FC = () => {
                     message: "",
                   },
                 });
-                setShowModal(true);
               }}
             >
               {({
@@ -123,7 +136,13 @@ const Contact: React.FC = () => {
                 handleBlur,
                 handleSubmit,
               }) => (
-                <form onSubmit={handleSubmit} className="flex flex-col">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
+                  className="flex flex-col"
+                >
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -140,7 +159,7 @@ const Contact: React.FC = () => {
                       id="name"
                       className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block  p-2.5 "
                       placeholder="Your awesome name"
-                    ></input>
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="name" />
                     </div>
@@ -161,7 +180,7 @@ const Contact: React.FC = () => {
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5  "
                       placeholder="your@email.com"
-                    ></input>
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="email" />
                     </div>
@@ -182,7 +201,7 @@ const Contact: React.FC = () => {
                       rows={4}
                       className="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
                       placeholder="Your thoughts here..."
-                    ></textarea>
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="message" />
                     </div>
@@ -201,7 +220,7 @@ const Contact: React.FC = () => {
               )}
             </Formik>
           </div>
-          <div className="border-r-2 border-zinc-700"></div>
+          <div className="border-r-2 border-zinc-700" />
           <div className="w-full flex flex-col mt-2">
             <p className=" block mb-2 text-sm font-medium text-zinc-300">
               {" "}
@@ -222,7 +241,7 @@ const Contact: React.FC = () => {
               Location
             </p>
             <div className="aspect-w-16 aspect-h-16 sm:aspect-h-16 md:aspect-h-16 lg:aspect-h-9 xl:aspect-h-9 ">
-              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=200%&amp;hl=en&amp;q=+(islamabad)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              <iframe src="https://maps.google.com/maps?width=100%25&amp;height=200%&amp;hl=en&amp;q=+(islamabad)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" />
             </div>
           </div>
         </div>
