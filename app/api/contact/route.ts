@@ -11,7 +11,7 @@ const supabase = createClient<Database>(url, key, {
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
-    const origin = req.url;
+    const origin = req.nextUrl.origin;
     const { name, email, message } = data.contact;
     const { error } = await supabase
       .from("messages")
