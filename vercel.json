@@ -4,5 +4,16 @@
       "path": "/api/github",
       "schedule": "0 3 * * *"
     }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        }
+      ]
+    }
   ]
 }
