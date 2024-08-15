@@ -8,17 +8,18 @@ const supabase = createClient<Database>(url, key, {
   auth: { persistSession: false },
 });
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request){ 
+  if (req.method !== 'POST') {
+    return Response.json({status:false, message: "Greetings! This Method Not Allowed" }, { status: 405 });
+  } 
   try {
     const data = await req.json();
-    const origin = req.nextUrl.origin;
     const { name, email, message } = data.contact;
     const { error } = await supabase
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-
-    return NextResponse.redirect(`${origin}/contact`, { status: 302 });
+    return NextResponse.redirect(new URL('/', req.url))
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
