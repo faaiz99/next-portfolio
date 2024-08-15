@@ -11,16 +11,14 @@ const supabase = createClient<Database>(url, key, {
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
+    const origin = req.url;
     const { name, email, message } = data.contact;
     const { error } = await supabase
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    const url = req.url
-      .replace("/api/contact", "")
-      .replace(/\/$/, "")
-      .replace(/\/$/, "");
-    return NextResponse.redirect(url, 308);
+
+    return NextResponse.redirect(`${origin}/contact`, {status:302});
 
   } catch (error) {
     return error instanceof Error
