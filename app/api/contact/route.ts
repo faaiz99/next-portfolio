@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+// import { createClient } from "@supabase/supabase-js";
 import { Database } from "../../Types/Supabase";
 
 // const url: string = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
