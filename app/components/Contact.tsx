@@ -34,19 +34,24 @@ const Contact: React.FC = () => {
   });
 
   useEffect(() => {
+    if (!contact.name || !contact.email || !contact.message) return;
     const sendMessage = async () => {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          contact,
-        }),
-      });
-      if (response.ok) {
-        setShowModal(true);
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            contact,
+          }),
+        });
+        if (response.ok) {
+          setShowModal(true);
+        }
+      } catch (error) {
+        console.error(error);
       }
     };
     sendMessage();
