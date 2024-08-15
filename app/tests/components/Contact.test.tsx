@@ -23,7 +23,6 @@ const mockFetch = (): Promise<Response> => {
 
 global.fetch = vi.fn().mockImplementation(mockFetch);
 
-
 describe("Contact ", () => {
   it("Should Render", () => {
     render(<Contact />);
@@ -33,9 +32,15 @@ describe("Contact ", () => {
   it("Should Submit Form Success", async () => {
     render(<Contact />);
 
-    fireEvent.change(screen.getByPlaceholderText(/Your awesome name/i), { target: { value: 'John Doe' } });
-    fireEvent.change(screen.getByPlaceholderText(/your@email.com/i), { target: { value: 'john@example.com' } });
-    fireEvent.change(screen.getByPlaceholderText(/Your thoughts here.../i), { target: { value: 'Hello!' } });
+    fireEvent.change(screen.getByPlaceholderText(/Your awesome name/i), {
+      target: { value: "John Doe" },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/your@email.com/i), {
+      target: { value: "john@example.com" },
+    });
+    fireEvent.change(screen.getByPlaceholderText(/Your thoughts here.../i), {
+      target: { value: "Hello!" },
+    });
     fireEvent.click(screen.getByText(/send/i));
     const modal = await screen.findByText(/Message Sent Success/i);
     expect(modal).toBeInTheDocument();
