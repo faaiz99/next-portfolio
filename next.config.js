@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  crossOrigin: "anonymous",
   images: { unoptimized: true },
   async headers() {
     return [{
