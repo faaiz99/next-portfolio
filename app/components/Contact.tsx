@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Formik, ErrorMessage } from "formik";
 import React, { useState, useEffect } from "react";
@@ -39,16 +39,15 @@ const Contact: React.FC = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          contact
-        })
-
+          contact,
+        }),
       });
       if (response.ok) {
         setShowModal(true);
       }
-    }
+    };
     sendMessage();
-  }, [contact])
+  }, [contact]);
 
   if (showModal === true) {
     setTimeout(() => {
@@ -137,10 +136,13 @@ const Contact: React.FC = () => {
                 handleBlur,
                 handleSubmit,
               }) => (
-                <form onSubmit={(e) => {
-                  e.preventDefault()
-                  handleSubmit()
-                }} className="flex flex-col">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
+                  className="flex flex-col"
+                >
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -148,14 +150,16 @@ const Contact: React.FC = () => {
                     >
                       Name
                     </label>
-                    <input type="text"
+                    <input
+                      type="text"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.name}
                       name="name"
                       id="name"
                       className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block  p-2.5 "
-                      placeholder="Your awesome name" />
+                      placeholder="Your awesome name"
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="name" />
                     </div>
@@ -167,14 +171,16 @@ const Contact: React.FC = () => {
                     >
                       Email
                     </label>
-                    <input onChange={handleChange}
+                    <input
+                      onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
                       type="email"
                       name="email"
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg block w-full p-2.5  "
-                      placeholder="your@email.com" />
+                      placeholder="your@email.com"
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="email" />
                     </div>
@@ -187,13 +193,15 @@ const Contact: React.FC = () => {
                     >
                       Your message
                     </label>
-                    <textarea id="message"
+                    <textarea
+                      id="message"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.message}
                       rows={4}
                       className="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-                      placeholder="Your thoughts here..." />
+                      placeholder="Your thoughts here..."
+                    />
                     <div className="text-red-500 text-sm p-1">
                       <ErrorMessage name="message" />
                     </div>
