@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
   });
 
   useEffect(() => {
-    if (!contact.name || !contact.email || !contact.message) return; 
+    if (!contact.name || !contact.email || !contact.message) return;
     const sendMessage = async () => {
       try {
         const response = await fetch("/api/contact", {
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
           setShowModal(true);
         }
       } catch (error) {
-        console.error(error); 
+        console.error(error);
       }
     };
     sendMessage();
