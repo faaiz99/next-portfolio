@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       .from("messages")
       .insert([{ name, email, message }]);
     if (error) throw error;
-    return NextResponse.json({message:"success"}, { status: 201 });
+    return NextResponse.json({ message: "success" }, { status: 201 });
   } catch (error) {
     return error instanceof Error
       ? NextResponse.json({ error: error.message }, { status: 500 })
