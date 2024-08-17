@@ -73,7 +73,7 @@ const About: React.FC = () => {
               Topics in Computer Science II
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Web Technologies
             </li>
             <li className="flex items-center">
@@ -105,19 +105,19 @@ const About: React.FC = () => {
               ReactJS
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               VueJS
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               NextJS
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Tailwind CSS
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               ExpressJS
             </li>
             <li className="flex items-center">
@@ -134,7 +134,7 @@ const About: React.FC = () => {
               JavaScript
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               TypeScript
             </li>
           </ul>
@@ -175,11 +175,11 @@ const About: React.FC = () => {
               PostgreSQL
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Supabase
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Firebase
             </li>
           </ul>

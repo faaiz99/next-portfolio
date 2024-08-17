@@ -55,11 +55,11 @@ export const Future: React.FC = () => {
               Starting off with C++
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Operating Systems Concept
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               TypeScript Handbook
             </li>
             <li className="flex items-center">
@@ -83,7 +83,7 @@ export const Future: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Get a Master&apos;s Degree
             </li>
           </ul>
@@ -92,7 +92,7 @@ export const Future: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Systems Design
             </li>
           </ul>
@@ -137,11 +137,11 @@ export const Future: React.FC = () => {
               ORM&apos;s
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Reducing Bundle Size
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Cloud Platforms
             </li>
             <li className="flex items-center">
@@ -175,11 +175,11 @@ export const Future: React.FC = () => {
               Microservices
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Golang
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               GraphQL
             </li>
           </ul>
@@ -208,7 +208,7 @@ export const Future: React.FC = () => {
               Contribute to Open Source S/W
             </li>
             <li className="flex items-center">
-                     <GreenTick />
+              <GreenTick />
               Attend JSConf (Node/React/Next/Vue)
             </li>
             <li className="flex items-center">
