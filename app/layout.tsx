@@ -22,11 +22,7 @@ type RootLayoutProps = {
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
-    <html
-      lang="en"
-      className="scroll-smooth"
-      suppressHydrationWarning={true}
-    >
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <Providers>
           <Navbar />
