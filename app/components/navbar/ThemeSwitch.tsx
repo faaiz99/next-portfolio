@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Sun, Moon } from "lucide-react";
 import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -23,7 +23,11 @@ const ThemeSwitch: React.FC = () => {
 
   return (
     <div onClick={toggleTheme} className="hover:cursor-pointer">
-      {theme === "light" ? <Sun size={20} color="white" /> : <Moon size={20} color="white" />}
+      {theme === "light" ? (
+        <Sun size={20} color="white" />
+      ) : (
+        <Moon size={20} color="white" />
+      )}
     </div>
   );
 };
