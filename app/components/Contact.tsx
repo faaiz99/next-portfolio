@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as Yup from "yup";
 import Top from "./Top";
+import { Map, Mail, Phone, UserPen, NotebookPen } from "lucide-react";
 
 export const runtime = "edge";
 
@@ -152,12 +153,22 @@ const Contact: React.FC = () => {
                   className="flex flex-col"
                 >
                   <div className="mb-4">
-                    <label
-                      htmlFor="name"
-                      className=" block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      Name
-                    </label>
+                    <div className="flex gap-x-2">
+                      <UserPen
+                        color="white"
+                        size={18}
+                        strokeWidth={1.5}
+                        absoluteStrokeWidth={false}
+                      />
+                      <label
+                        htmlFor="name"
+                        className=" block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        {" "}
+                        Name
+                      </label>
+                    </div>
+
                     <input
                       type="text"
                       onChange={handleChange}
@@ -173,12 +184,21 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      Email
-                    </label>
+                    <div className="flex gap-x-2">
+                      <Mail
+                        color="white"
+                        size={18}
+                        strokeWidth={1.5}
+                        absoluteStrokeWidth={false}
+                      />
+                      <label
+                        htmlFor="email"
+                        className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        Email
+                      </label>
+                    </div>
+
                     <input
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -195,12 +215,21 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="mb-4">
-                    <label
-                      htmlFor="message"
-                      className="block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      Your message
-                    </label>
+                    <div className="flex gap-x-2">
+                      <NotebookPen
+                        color="white"
+                        size={18}
+                        strokeWidth={1.5}
+                        absoluteStrokeWidth={false}
+                      />
+                      <label
+                        htmlFor="message"
+                        className="block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        Your message
+                      </label>
+                    </div>
+
                     <textarea
                       id="message"
                       onChange={handleChange}
@@ -230,24 +259,41 @@ const Contact: React.FC = () => {
           </div>
           <div className="border-r-2 border-zinc-700" />
           <div className="w-full flex flex-col mt-2">
-            <p className=" block mb-2 text-sm font-medium text-zinc-300">
-              {" "}
-              Phone
-            </p>
-            <p className=" block mb-2 text-sm font-medium text-white">
-              {" "}
-              (+92) 332711471
-            </p>
-            <p className=" block mb-2 text-sm font-medium text-zinc-300">
-              Email
-            </p>
-            <p className=" block mb-2 text-sm font-medium text-white">
-              {" "}
-              faaizaslam75@live.com{" "}
-            </p>
-            <p className=" block mb-2 text-sm font-medium text-zinc-300">
-              Location
-            </p>
+            <div className="flex gap-x-2">
+              <Phone
+                color="white"
+                size={18}
+                strokeWidth={1.5}
+                absoluteStrokeWidth={false}
+              />
+              <p className=" block mb-2 text-sm font-medium text-zinc-300">
+                (+92) 332711471
+              </p>
+            </div>
+            <div className="flex gap-x-2">
+              <Mail
+                color="white"
+                size={18}
+                strokeWidth={1.5}
+                absoluteStrokeWidth={false}
+              />
+
+              <p className=" block mb-2 text-sm font-medium text-zinc-300">
+                faaizaslam75@live.com{" "}
+              </p>
+            </div>
+            <div className="flex gap-x-2">
+              <Map
+                color="white"
+                size={18}
+                strokeWidth={1.5}
+                absoluteStrokeWidth={false}
+              />
+              <p className=" block mb-2 text-sm font-medium text-zinc-300">
+                Location
+              </p>
+            </div>
+
             <div className="aspect-w-16 aspect-h-16 sm:aspect-h-16 md:aspect-h-16 lg:aspect-h-9 xl:aspect-h-9 ">
               <iframe src="https://maps.google.com/maps?width=100%25&amp;height=200%&amp;hl=en&amp;q=+(islamabad)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" />
             </div>
