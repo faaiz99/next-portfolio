@@ -14,15 +14,14 @@ const Home: React.FC = () => {
         className="flex flex-wrap justify-center md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2"
         id="intro"
       >
-        <div className=" hover:shadow-lg  hover:shadow-zinc-500 flex flex-col items-center bg-zinc-900 p-8 rounded-3xl h-auto w-96  sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">
-          <Image
-            src="/assets/faaiz.jpeg"
-            loading="lazy"
-            className="h-auto w-auto border-2 border-green-500 rounded-full"
-            alt="picture of faaiz"
-            width={0}
-            height={0}
-          />
+        <div className="hover:shadow-lg hover:shadow-zinc-500 flex flex-col items-center p-8 rounded-3xl h-auto w-96 sm:w-5/6 md:w-5/6 lg:w-5/6 xl:w-5/6 mb-4 gap-4">          <Image
+          src="/assets/faaiz.jpeg"
+          loading="lazy"
+          className="h-auto w-auto border-2 border-green-500 rounded-full"
+          alt="picture of faaiz"
+          width={0}
+          height={0}
+        />
 
           <p className=" text-justify font-normal break-normal text-zinc-400">
             Hello Visitor, Welcome to my site, here&apos;s my brief introduction{" "}

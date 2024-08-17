@@ -24,9 +24,10 @@ const ThemeSwitch: React.FC = () => {
   return (
     <div onClick={toggleTheme} className="hover:cursor-pointer">
       {theme === "light" ? (
-        <Sun size={20} color="white" />
+        <Moon size={20} color="grey" />
+
       ) : (
-        <Moon size={20} color="white" />
+        <Sun size={20} color="grey" />
       )}
     </div>
   );

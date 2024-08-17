@@ -1,4 +1,4 @@
-import Throbber from "./shared/Spinner";
+import Throbber from "./shared/Throbber";
 export const Spinner: React.FC = () => {
   return (
     <div className="flex items-center justify-center rounded-lg ">
