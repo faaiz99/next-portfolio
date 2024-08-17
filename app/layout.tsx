@@ -23,7 +23,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html
       lang="en"
-      className="bg-zinc-950 text-zinc-200 scroll-smooth"
+      className="bg-zinc-100  dark:bg-zinc-950 text-zinc-200 scroll-smooth"
       suppressHydrationWarning={true}
     >
       <body className={inter.className}>
