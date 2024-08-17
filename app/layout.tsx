@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Providers } from "./Providers";
 
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
@@ -27,10 +28,12 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       suppressHydrationWarning={true}
     >
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <SpeedInsights />
-        <Footer />
+        <Providers>
+          <Navbar />
+          {children}
+          <SpeedInsights />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

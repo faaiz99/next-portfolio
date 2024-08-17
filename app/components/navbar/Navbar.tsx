@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar: React.FC = () => {
   return (
@@ -41,6 +42,7 @@ const Navbar: React.FC = () => {
         >
           Contact
         </Link>
+        <ThemeSwitch />
       </div>
     </div>
   );
