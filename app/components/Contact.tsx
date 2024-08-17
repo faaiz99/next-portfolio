@@ -154,22 +154,21 @@ const Contact: React.FC = () => {
                 >
                   <div className="mb-4">
                     <div className="flex gap-x-2">
-                    <UserPen
+                      <UserPen
                         color="white"
                         size={18}
                         strokeWidth={1.5}
                         absoluteStrokeWidth={false}
                       />
-                    <label
-                      htmlFor="name"
-                      className=" block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      
-                      {" "}
-                      Name
-                    </label>
+                      <label
+                        htmlFor="name"
+                        className=" block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        {" "}
+                        Name
+                      </label>
                     </div>
-                    
+
                     <input
                       type="text"
                       onChange={handleChange}
@@ -185,21 +184,21 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                   <div className="mb-4">
-                  <div className="flex gap-x-2">
-                  <Mail
-                      color="white"
-                      size={18}
-                      strokeWidth={1.5}
-                      absoluteStrokeWidth={false}
-                    />
-                    <label
-                      htmlFor="email"
-                      className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      Email
-                    </label>
-                  </div>
-                    
+                    <div className="flex gap-x-2">
+                      <Mail
+                        color="white"
+                        size={18}
+                        strokeWidth={1.5}
+                        absoluteStrokeWidth={false}
+                      />
+                      <label
+                        htmlFor="email"
+                        className=" w-full  block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        Email
+                      </label>
+                    </div>
+
                     <input
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -216,23 +215,22 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="mb-4">
-                  <div className="flex gap-x-2">
-                  <NotebookPen
-                      color="white"
-                      size={18}
-                      strokeWidth={1.5}
-                      absoluteStrokeWidth={false}
-                    />
-                    <label
-                      htmlFor="message"
-                      className="block mb-2 text-sm font-medium text-zinc-300"
-                    >
-                      Your message
-                    </label>
-      
-                  </div>
+                    <div className="flex gap-x-2">
+                      <NotebookPen
+                        color="white"
+                        size={18}
+                        strokeWidth={1.5}
+                        absoluteStrokeWidth={false}
+                      />
+                      <label
+                        htmlFor="message"
+                        className="block mb-2 text-sm font-medium text-zinc-300"
+                      >
+                        Your message
+                      </label>
+                    </div>
 
-                   <textarea
+                    <textarea
                       id="message"
                       onChange={handleChange}
                       onBlur={handleBlur}
