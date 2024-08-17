@@ -1,4 +1,4 @@
-import GreenTick from "./shared/GreenTick";
+import GreenTick from "./shared/GreenTickChecked";
 
 const About: React.FC = () => {
   return (

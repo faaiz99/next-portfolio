@@ -1,4 +1,4 @@
-const GreenTick: React.FC = () => (
+const GreenTickChecked: React.FC = () => (
   <div className="flex items-center">
     <svg
       className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
@@ -15,4 +15,4 @@ const GreenTick: React.FC = () => (
   </div>
 );
 
-export default GreenTick;
+export default GreenTickChecked;
