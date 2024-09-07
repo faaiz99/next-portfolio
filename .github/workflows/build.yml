@@ -15,15 +15,17 @@ jobs:
       security-events: write
       actions: read
   Test:
+    needs: Code-Quality-Checks
     uses: "./.github/workflows/test.yml"
 
   Deploy:
+    needs: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Conditional deployment for development (preview) branches
-      - name: Deploy to Preview
+      # Conditional deployment for development branches
+      - name: Deploy to Development
         if: github.ref == 'refs/heads/development'
         uses: amondnet/vercel-action@v25
         with:
