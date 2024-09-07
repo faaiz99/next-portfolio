@@ -8,12 +8,12 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 console.log("Hello from Functions!");
 
 Deno.serve(async (req) => {
-  const url  = Deno.env.get("prodURL");
+  const url = Deno.env.get("prodURL");
   try {
     const response = await fetch(url, {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
 
@@ -22,21 +22,16 @@ Deno.serve(async (req) => {
     }
 
     const data = await response.json();
-    return new Response(
-      JSON.stringify(data),
-      { headers: { "Content-Type": "application/json" } },
-    )
-
+    return new Response(JSON.stringify(data), {
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    console.error('Error fetching data:', error);
-    return new Response(
-      JSON.stringify(error),
-      { headers: { "Content-Type": "application/json" } },
-    )
+    console.error("Error fetching data:", error);
+    return new Response(JSON.stringify(error), {
+      headers: { "Content-Type": "application/json" },
+    });
   }
-
-
-})
+});
 
 /* To invoke locally:
 
