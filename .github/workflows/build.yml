@@ -3,9 +3,9 @@ on:
   workflow_call:
   push:
     branches: ["development", "main"]
-  pull_request:
-    types: [opened, reopened, synchronize]
-    branches: ["main"]
+  # pull_request:
+  #   types: [opened, reopened, synchronize]
+  #   branches: ["main"]
 
 jobs:
   Code-Quality-Checks:
