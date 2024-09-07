@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/github",
+      "path": "/api/sync-repos-cron",
       "schedule": "0 3 * * *"
     }
   ],
