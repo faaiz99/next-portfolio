@@ -1,3 +1,4 @@
+import GreenTick from "./shared/GreenTick";
 export const Future: React.FC = () => {
   return (
     <>
@@ -54,33 +55,11 @@ export const Future: React.FC = () => {
               Starting off with C++
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Operating Systems Concept
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               TypeScript Handbook
             </li>
             <li className="flex items-center">
@@ -104,18 +83,7 @@ export const Future: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Get a Master&apos;s Degree
             </li>
           </ul>
@@ -124,18 +92,7 @@ export const Future: React.FC = () => {
           </p>
           <ul className="text-zinc-400">
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Systems Design
             </li>
           </ul>
@@ -180,33 +137,11 @@ export const Future: React.FC = () => {
               ORM&apos;s
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Reducing Bundle Size
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Cloud Platforms
             </li>
             <li className="flex items-center">
@@ -240,33 +175,11 @@ export const Future: React.FC = () => {
               Microservices
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Golang
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               GraphQL
             </li>
           </ul>
@@ -295,18 +208,7 @@ export const Future: React.FC = () => {
               Contribute to Open Source S/W
             </li>
             <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500  flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <GreenTick />
               Attend JSConf (Node/React/Next/Vue)
             </li>
             <li className="flex items-center">
