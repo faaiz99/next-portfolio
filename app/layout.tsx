@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
 import { NextFont } from "next/dist/compiled/@next/font";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter: NextFont = Inter({ subsets: ["latin"] });
 
@@ -29,7 +28,6 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <body className={inter.className}>
         <Navbar />
         {children}
-        <SpeedInsights />
         <Footer />
       </body>
     </html>
