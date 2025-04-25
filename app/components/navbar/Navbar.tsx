@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         height={20}
         alt="Coding Logo"
       />
-      <div className="flex space-x-8 mt-3">
+      {/* <div className="flex space-x-8 mt-3">
         <Link
           className="text-center text-sm text-zinc-400 font-semibold hover:text-green-500"
           href="#intro"
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           About
         </Link>
   
-      </div>
+      </div> */}
     </div>
   );
 };
