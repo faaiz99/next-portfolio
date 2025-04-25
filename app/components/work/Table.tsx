@@ -190,7 +190,7 @@ const Table: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {repos.map((repo) => {
+            {repos?.map((repo) => {
               return (
                 <React.Fragment key={repo.id}>
                   <tr className=" border-b bg-zinc-700 ">
