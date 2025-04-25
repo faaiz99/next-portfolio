@@ -1,249 +1,99 @@
 import GreenTick from "./shared/GreenTick";
-export const Future: React.FC = () => {
+
+const Future: React.FC = () => {
   return (
-    <>
-      <div
-        data-testid="future"
-        className="mt-12 mb-12 flex flex-row justify-around space-x-4 p-2"
-      >
-        <p className="text-4xl text-center font-bold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl">
-          The Way
-          <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">
-            {" "}
-            Forward
-          </span>
-          .
-        </p>
+    <section className="container mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-200">
+  The Way <span className="text-green-500 font-extrabold relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-green-400 to-green-500">Forward</span>
+</h2>
       </div>
-      <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row gap-4 p-2">
-        <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
-          <p className="text-xl text-left font-semibold  text-zinc-200">
-            What needs to be{" "}
-            <span className="text-xl text-left font-bold  text-green-500">
-              read
-            </span>
-          </p>
-          <ul className="text-zinc-400">
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              The Pragmatic Programmer
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Starting off with C++
-            </li>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* What to Read Card */}
+        <div className="hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-6 rounded-3xl">
+          <h3 className="text-xl font-semibold text-zinc-200 mb-4">
+            What needs to be <span className="text-green-500 font-bold">read</span>
+          </h3>
+          <ul className="space-y-3 text-sm text-zinc-400">
+            {[
+              "The Pragmatic Programmer",
+              "Starting off with C++",
+              "Operating Systems Concept",
+              "TypeScript Handbook",
+              "Cracking the Coding Interview"
+            ].map((item) => (
+              <li key={item} className="flex items-center">
+                <GreenTick />
+                <span className="ml-2">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="text-xl font-semibold text-zinc-200 mt-6 mb-4">Education</h3>
+          <ul className="space-y-3 text-sm text-zinc-400">
             <li className="flex items-center">
               <GreenTick />
-              Operating Systems Concept
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              TypeScript Handbook
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Cracking the Coding Interview
+              <span className="ml-2">Get a Master's Degree</span>
             </li>
           </ul>
-          <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">
-            Education
-          </p>
-          <ul className="text-zinc-400">
+
+          <h3 className="text-xl font-semibold text-zinc-200 mt-6 mb-4">Course</h3>
+          <ul className="space-y-3 text-sm text-zinc-400">
             <li className="flex items-center">
               <GreenTick />
-              Get a Master&apos;s Degree
-            </li>
-          </ul>
-          <p className="text-xl text-left font-semibold  text-zinc-200 mt-4">
-            Course
-          </p>
-          <ul className="text-zinc-400">
-            <li className="flex items-center">
-              <GreenTick />
-              Systems Design
+              <span className="ml-2">Systems Design</span>
             </li>
           </ul>
         </div>
 
-        <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
-          <p className="text-xl text-left font-semibold  text-zinc-200 ">
-            What needs to be{" "}
-            <span className="text-xl text-left font-bold  text-green-500">
-              learned
-            </span>
-          </p>
-          <ul className="text-zinc-400">
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Unit Testing
-            </li>
-            <li className="flex items-center line-through">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              ORM&apos;s
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              Reducing Bundle Size
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              Cloud Platforms
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Load Balacing (Nginx)
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Microservices
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              Golang
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              GraphQL
-            </li>
+        {/* What to Learn Card */}
+        <div className="hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-6 rounded-3xl">
+          <h3 className="text-xl font-semibold text-zinc-200 mb-4">
+            What needs to be <span className="text-green-500 font-bold">learned</span>
+          </h3>
+          <ul className="space-y-3 text-sm text-zinc-400">
+            {[
+              {text: "Unit Testing", completed: false},
+              {text: "ORM's", completed: true},
+              {text: "Reducing Bundle Size", completed: false},
+              {text: "Cloud Platforms", completed: false},
+              {text: "Load Balancing (Nginx)", completed: false},
+              {text: "Microservices", completed: false},
+              {text: "Golang", completed: false},
+              {text: "GraphQL", completed: false}
+            ].map((item) => (
+              <li key={item.text} className={`flex items-center ${item.completed ? 'line-through' : ''}`}>
+                <GreenTick />
+                <span className="ml-2">{item.text}</span>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col  bg-zinc-900 p-8 rounded-3xl h-96 w-96">
-          <p className="text-xl text-left font-semibold  text-zinc-200">
-            What needs to be{" "}
-            <span className="text-xl text-left font-bold  text-green-500">
-              experienced
-            </span>
-          </p>
-          <ul className="text-zinc-400">
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Contribute to Open Source S/W
-            </li>
-            <li className="flex items-center">
-              <GreenTick />
-              Attend JSConf (Node/React/Next/Vue)
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Work in a German Product Company
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-4 h-4 mr-1.5 text-green-500 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              Study in a Foreign Univeristy
-            </li>
+
+        {/* What to Experience Card */}
+        <div className="hover:shadow-lg hover:shadow-zinc-500 bg-zinc-900 p-6 rounded-3xl">
+          <h3 className="text-xl font-semibold text-zinc-200 mb-4">
+            What needs to be <span className="text-green-500 font-bold">experienced</span>
+          </h3>
+          <ul className="space-y-3 text-sm text-zinc-400">
+            {[
+              "Contribute to Open Source S/W",
+              "Attend JSConf (Node/React/Next/Vue)",
+              "Work in a German Product Company",
+              "Study in a Foreign University"
+            ].map((item) => (
+              <li key={item} className="flex items-center">
+                <GreenTick />
+                <span className="ml-2">{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-    </>
+    </section>
   );
 };
+
+
+export default Future;

@@ -1,9 +1,11 @@
-import { Inter } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
-import { NextFont } from "next/dist/compiled/@next/font";
+import { Inter } from "next/font/google";
 
-const inter: NextFont = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 interface Metadata {
   title: string;
@@ -22,10 +24,10 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html
       lang="en"
-      className="bg-zinc-100  dark:bg-zinc-950 text-zinc-200 scroll-smooth"
-      suppressHydrationWarning={true}
+      suppressHydrationWarning={false}
+      className={`${inter.className} bg-zinc-100  dark:bg-zinc-950 text-zinc-200 scroll-smooth`}
     >
-      <body className={inter.className}>
+      <body>
         <Navbar />
         {children}
         <Footer />
