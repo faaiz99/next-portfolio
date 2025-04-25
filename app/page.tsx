@@ -3,6 +3,7 @@ import "../app/globals.css";
 import About from "./components/About";
 import Work from "./components/work/Work";
 import Future from "./components/Future";
+import Studied from "./components/Studied";
 import Home from "./components/Home";
 
 import React, { useState, useEffect } from "react";
@@ -24,6 +25,7 @@ export default function Page() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    //@ts-expect-error: unknown type
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -79,6 +81,19 @@ export default function Page() {
         variants={slideFromBottom}
       >
         <About />
+      </motion.section>
+
+          {/* Studied Section */}
+          <motion.section
+        id="future"
+        className="relative min-h-screen w-full snap-start pt-20 md:pt-0 z-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        variants={slideFromTop}
+      >
+        <Studied />
       </motion.section>
 
       {/* Future Section */}
