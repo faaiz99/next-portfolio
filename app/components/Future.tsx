@@ -34,7 +34,7 @@ const Future: React.FC = () => {
           <ul className="space-y-3 text-sm text-zinc-400">
             <li className="flex items-center">
               <GreenTick />
-              <span className="ml-2">Get a Master's Degree</span>
+              <span className="ml-2">Get a Master&apos;s Degree</span>
             </li>
           </ul>
 
