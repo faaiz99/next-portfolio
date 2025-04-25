@@ -24,26 +24,26 @@ const getTotalRepos = async (): Promise<number> => {
 /* div cannot be inside p tag it will cause hydration errors */
 
 const Work: React.FC = () => {
-  const [user, setUser] = useState<User>();
-  const [userLoaded, setUserLoaded] = useState<boolean>(false);
-  const [repoLoaded, setRepoLoaded] = useState<boolean>(false);
-  const [totalRepos, setTotalRepos] = useState<number>(0);
+  // const [user, setUser] = useState<User>();
+  // const [userLoaded, setUserLoaded] = useState<boolean>(false);
+  // const [repoLoaded, setRepoLoaded] = useState<boolean>(false);
+  // const [totalRepos, setTotalRepos] = useState<number>(0);
 
-  useEffect(() => {
-    async function populateData() {
-      const userData = await getUser();
-      setUser(userData);
-      setUserLoaded(true);
-      const reposCount = await getTotalRepos();
-      setTotalRepos(reposCount);
-      setRepoLoaded(true);
-    }
-    populateData();
-  }, []);
+  // useEffect(() => {
+  //   async function populateData() {
+  //     const userData = await getUser();
+  //     setUser(userData);
+  //     setUserLoaded(true);
+  //     const reposCount = await getTotalRepos();
+  //     setTotalRepos(reposCount);
+  //     setRepoLoaded(true);
+  //   }
+  //   populateData();
+  // }, []);
 
   return (
     <>
-      <p
+      {/* <p
         className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl"
         id="work"
       >
@@ -99,7 +99,7 @@ const Work: React.FC = () => {
             <Spinner />
           )}
         </div>
-      </div>
+      </div> */}
       <div className="justify-center flex mt-12 px-12">
         <Github />
       </div>
