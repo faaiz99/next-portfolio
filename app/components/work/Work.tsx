@@ -5,10 +5,11 @@ import { Spinner } from "../Spinner";
 import { User } from "../../Types/User";
 import Github from "./Github";
 
-const getUser = async (): Promise<User> => {
+const getUser = async (): Promise<User | null> => {
   const { data: users, error } = await supabase.from("users").select("*");
   if (error) console.log("error while fetching user:", error);
-  return users![0];
+  if(users?.length === 0) return users[0]
+  return null
 };
 
 const getTotalRepos = async (): Promise<number> => {
