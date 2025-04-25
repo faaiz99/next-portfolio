@@ -43,17 +43,17 @@ const Work: React.FC = () => {
 
   return (
     <>
-      {/* <p
+      <p
         className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl"
         id="work"
       >
         <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">
           {" "}
-          Github{" "}
+          Contributions{" "}
         </span>
-        Stats.
+        Graph.
       </p>
-      <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
+      {/* <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
         <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-32">
           <p className="text-sm text-center font-semibold  text-zinc-400">
             Repos

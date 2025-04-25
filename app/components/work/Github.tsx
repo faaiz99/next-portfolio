@@ -5,7 +5,7 @@ const Github = () => {
   const username: string = process.env.NEXT_PUBLIC_USER_NAME ?? "undefined";
   return (
     <div data-testid="github">
-      <GitHubCalendar username={username} />
+      <GitHubCalendar username={"faaiz-backend-II"} />
     </div>
   );
 };

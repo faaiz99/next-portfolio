@@ -94,7 +94,7 @@ const Table: React.FC = () => {
   };
   return (
     <>
-      <p
+      {/* <p
         className="mt-12 mb-12 text-4xl text-center font-semibold  text-zinc-200 sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl"
         id="work"
       >
@@ -225,7 +225,7 @@ const Table: React.FC = () => {
             })}
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* TODO: Implement pagination */}
       {/* <div className="inline">
