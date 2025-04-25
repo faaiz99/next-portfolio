@@ -5,7 +5,6 @@ import About from "./components/About";
 import Work from "./components/work/Work";
 import { Future } from "./components/Future";
 import React from "react";
-import Table from "./components/work/Table";
 
 export default async function Page() {
   return (
@@ -21,12 +20,6 @@ export default async function Page() {
       </div>
       <div className="my-48 ">
         <Work />
-      </div>
-      <div className="my-48 ">
-        <Table />
-      </div>
-      <div className="my-48">
-        <Contact />
       </div>
     </main>
   );

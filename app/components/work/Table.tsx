@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../helper/db.helper";
 import { Repo } from "../../Types/Repos";

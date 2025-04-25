@@ -33,14 +33,7 @@ const Navbar: React.FC = () => {
         >
           About
         </Link>
-        <Link
-          className="text-center text-sm text-zinc-400 font-semibold hover:text-green-500"
-          href="#contact"
-          id="#top"
-          scroll={false}
-        >
-          Contact
-        </Link>
+  
       </div>
     </div>
   );

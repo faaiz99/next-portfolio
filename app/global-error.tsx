@@ -1,4 +1,4 @@
-'use client'; // Error boundaries must be Client Components
+"use client"; // Error boundaries must be Client Components
 
 export default function GlobalError({
   error,
@@ -15,7 +15,7 @@ export default function GlobalError({
             Oops! Something went wrong.
           </h2>
           <p className="text-zinc-400 mb-6">
-            {error.message || 'An unexpected error occurred. Please try again.'}
+            {error.message || "An unexpected error occurred. Please try again."}
           </p>
           <button
             onClick={() => reset()}
