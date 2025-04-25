@@ -24,22 +24,22 @@ const getTotalRepos = async (): Promise<number> => {
 /* div cannot be inside p tag it will cause hydration errors */
 
 const Work: React.FC = () => {
-  const [user, setUser] = useState<User>();
-  const [userLoaded, setUserLoaded] = useState<boolean>(false);
-  const [repoLoaded, setRepoLoaded] = useState<boolean>(false);
-  const [totalRepos, setTotalRepos] = useState<number>(0);
+  // const [user, setUser] = useState<User>();
+  // const [userLoaded, setUserLoaded] = useState<boolean>(false);
+  // const [repoLoaded, setRepoLoaded] = useState<boolean>(false);
+  // const [totalRepos, setTotalRepos] = useState<number>(0);
 
-  useEffect(() => {
-    async function populateData() {
-      const userData = await getUser();
-      setUser(userData);
-      setUserLoaded(true);
-      const reposCount = await getTotalRepos();
-      setTotalRepos(reposCount);
-      setRepoLoaded(true);
-    }
-    populateData();
-  }, []);
+  // useEffect(() => {
+  //   async function populateData() {
+  //     const userData = await getUser();
+  //     setUser(userData);
+  //     setUserLoaded(true);
+  //     const reposCount = await getTotalRepos();
+  //     setTotalRepos(reposCount);
+  //     setRepoLoaded(true);
+  //   }
+  //   populateData();
+  // }, []);
 
   return (
     <>
@@ -49,11 +49,11 @@ const Work: React.FC = () => {
       >
         <span className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-green-500 font-extrabold">
           {" "}
-          Github{" "}
+          Contributions{" "}
         </span>
-        Stats.
+        Graph.
       </p>
-      <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
+      {/* <div className="flex flex-wrap justify-center  md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row  gap-4 p-2">
         <div className=" hover:shadow-lg hover:shadow-zinc-500 flex flex-col gap-6 bg-zinc-900 p-8  rounded-3xl h-32 w-32">
           <p className="text-sm text-center font-semibold  text-zinc-400">
             Repos
@@ -99,7 +99,7 @@ const Work: React.FC = () => {
             <Spinner />
           )}
         </div>
-      </div>
+      </div> */}
       <div className="justify-center flex mt-12 px-12">
         <Github />
       </div>
