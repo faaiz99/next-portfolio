@@ -4,7 +4,7 @@ export const Spinner: React.FC = () => {
       <div role="status">
         <svg
           aria-hidden="true"
-          className="w-8 h-8 mr-2 animate-spin text-gray-600 fill-green-500"
+          className="w-8 h-8 mr-2 animate-spin text-zinc-600 dark:text-zinc-400 fill-green-500"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
