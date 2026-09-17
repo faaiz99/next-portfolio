@@ -5,6 +5,7 @@ import Work from "./components/work/Work";
 import Future from "./components/Future";
 import Studied from "./components/Studied";
 import Home from "./components/Home";
+import Projects from "./components/projects/Projects";
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -38,13 +39,13 @@ export default function Page() {
   }, []);
 
   return (
-    <main 
-      className="relative space-y-0 md:space-y-56 lg:space-y-72 overflow-hidden"
+    <main
+      className="relative overflow-hidden"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Green gradient blur effect that follows mouse */}
-      <div 
+      <div
         className="fixed pointer-events-none -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-300 ease-out"
         style={{
           left: `${mousePosition.x}px`,
@@ -60,7 +61,7 @@ export default function Page() {
       {/* Hero Section */}
       <motion.section
         id="home"
-        className="relative flex items-center min-h-screen w-full snap-start z-10"
+        className="relative flex items-center min-h-[80vh] w-full scroll-mt-20 z-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -70,26 +71,52 @@ export default function Page() {
         <Home />
       </motion.section>
 
+      {/* Work Section */}
+      <motion.section
+        id="work"
+        className="relative w-full scroll-mt-20 py-16 md:py-24 z-10 border-t border-zinc-200 dark:border-zinc-800"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 0.8 }}
+        variants={slideFromBottom}
+      >
+        <Work />
+      </motion.section>
+
+      {/* Projects Section */}
+      <motion.section
+        id="projects"
+        className="relative w-full scroll-mt-20 py-16 md:py-24 z-10 border-t border-zinc-200 dark:border-zinc-800"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 0.8 }}
+        variants={slideFromTop}
+      >
+        <Projects />
+      </motion.section>
+
       {/* About Section */}
       <motion.section
         id="about"
-        className="relative min-h-screen w-full snap-start pt-20 md:pt-0 z-10"
+        className="relative w-full scroll-mt-20 py-16 md:py-24 z-10 border-t border-zinc-200 dark:border-zinc-800"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.8 }}
         variants={slideFromBottom}
       >
         <About />
       </motion.section>
 
-          {/* Studied Section */}
-          <motion.section
-        id="future"
-        className="relative min-h-screen w-full snap-start pt-20 md:pt-0 z-10"
+      {/* Studied Section */}
+      <motion.section
+        id="studied"
+        className="relative w-full scroll-mt-20 py-16 md:py-24 z-10 border-t border-zinc-200 dark:border-zinc-800"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.8 }}
         variants={slideFromTop}
       >
@@ -99,7 +126,7 @@ export default function Page() {
       {/* Future Section */}
       <motion.section
         id="future"
-        className="relative min-h-screen w-full snap-start pt-20 md:pt-0 z-10"
+        className="relative w-full scroll-mt-20 py-16 md:py-24 z-10 border-t border-zinc-200 dark:border-zinc-800"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -107,19 +134,6 @@ export default function Page() {
         variants={slideFromTop}
       >
         <Future />
-      </motion.section>
-
-      {/* Work Section */}
-      <motion.section
-        id="work"
-        className="relative min-h-screen w-full snap-start pt-20 md:pt-0 z-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-        variants={slideFromBottom}
-      >
-        <Work />
       </motion.section>
     </main>
   );

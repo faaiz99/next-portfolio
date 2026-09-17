@@ -9,12 +9,12 @@ export default function GlobalError({
 }) {
   return (
     <html>
-      <body className="bg-zinc-900 flex items-center justify-center min-h-screen">
-        <div className="text-center p-8 bg-zinc-900 shadow-lg rounded-3xl max-w-md w-full">
-          <h2 className="text-2xl font-bold text-zinc-200 mb-4">
+      <body className="bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center min-h-screen">
+        <div className="text-center p-8 bg-white dark:bg-zinc-900 shadow-lg rounded-3xl max-w-md w-full">
+          <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-200 mb-4">
             Oops! Something went wrong.
           </h2>
-          <p className="text-zinc-400 mb-6">
+          <p className="text-zinc-600 dark:text-zinc-400 mb-6">
             {error.message || "An unexpected error occurred. Please try again."}
           </p>
           <button
