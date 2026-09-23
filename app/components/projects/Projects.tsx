@@ -29,12 +29,12 @@ const projects = [
 const Projects: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <p className="mb-12 text-3xl md:text-4xl lg:text-5xl text-center font-semibold text-zinc-800 dark:text-zinc-200">
+      <h2 className="mb-12 text-3xl md:text-4xl lg:text-5xl text-center font-semibold text-zinc-800 dark:text-zinc-200">
         Personal{" "}
         <span className="text-green-500 font-extrabold relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-600 to-green-700 dark:from-green-300 dark:via-green-400 dark:to-green-500">
           Projects
         </span>
-      </p>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {projects.map((project) => (
           <LinkCard

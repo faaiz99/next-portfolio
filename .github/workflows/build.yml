@@ -1,48 +1,39 @@
 name: Build and Deploy
 on:
   workflow_call:
+  workflow_dispatch:
   push:
     branches: ["development", "main"]
-  # pull_request:
-  #   types: [opened, reopened, synchronize]
-  #   branches: ["main"]
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  VERCEL_ENV: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+  VERCEL_PROD_FLAG: ${{ github.ref == 'refs/heads/main' && '--prod' || '' }}
 
 jobs:
-  # Code-Quality-Checks:
-  #   uses: "./.github/workflows/eslint.yml"
-  #   permissions:
-  #     contents: write
-  #     security-events: write
-  #     actions: read
-
-  # Test:
-  #   needs: Code-Quality-Checks
-  #   uses: "./.github/workflows/test.yml"
-
   Deploy:
-    # needs: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Conditional deployment for development branches
-      - name: Deploy to Development
-        if: github.ref == 'refs/heads/development'
-        uses: amondnet/vercel-action@v25
+      - uses: actions/setup-node@v4
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID}}
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
-          vercel-args: '' # You c if needed
-          working-directory: .
-      
-      # Conditional deployment for the main branch (production)
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/main'
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID}}
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
-          vercel-args: '--prod' # Deploy to production
-          working-directory: .
+          node-version: 20
+          cache: yarn
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel environment
+        run: vercel pull --yes --environment=$VERCEL_ENV --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Builds on the runner so build errors show up in the Actions log
+      - name: Build
+        run: vercel build $VERCEL_PROD_FLAG --token=${{ secrets.VERCEL_TOKEN }}
+
+      # Only development (preview) and main (production) are deployed;
+      # manual runs on other branches just verify the build.
+      - name: Deploy
+        if: github.ref == 'refs/heads/development' || github.ref == 'refs/heads/main'
+        run: vercel deploy --prebuilt $VERCEL_PROD_FLAG --token=${{ secrets.VERCEL_TOKEN }}
