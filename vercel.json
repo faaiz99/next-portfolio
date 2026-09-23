@@ -1,10 +1,4 @@
 {
-  "crons": [
-    {
-      "path": "/api/sync-repos-cron",
-      "schedule": "0 3 * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,0 +1,30 @@
+export const siteConfig = {
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://faaiz-portfolio-prod.vercel.app",
+  name: "Faaiz Aslam",
+  jobTitle: "Full Stack Engineer",
+  title: "Faaiz Aslam | Full Stack Engineer",
+  description:
+    "Faaiz Aslam is a Full Stack Engineer building scalable web apps and APIs with Next.js, React, Node.js, NestJS, .NET Core and Azure. Explore work experience, projects and skills.",
+  keywords: [
+    "Faaiz Aslam",
+    "Full Stack Engineer",
+    "Software Engineer",
+    "Backend Engineer",
+    "Next.js Developer",
+    "React Developer",
+    "Node.js Developer",
+    "NestJS",
+    ".NET Core",
+    "TypeScript",
+    "Azure",
+    "Portfolio",
+  ],
+  image: "/assets/faaiz.jpeg",
+  twitterHandle: "@commander2811",
+  sameAs: [
+    "https://github.com/faaiz99",
+    "https://www.linkedin.com/in/faaiz-aslam",
+    "https://twitter.com/commander2811",
+    "https://stackoverflow.com/users/12505891/faaiz-aslam",
+  ],
+};

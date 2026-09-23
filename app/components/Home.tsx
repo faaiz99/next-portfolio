@@ -9,7 +9,7 @@ const Home = () => (
     <div className="text-center mb-16">
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 relative">
         {/* Glowing background effect */}
-        <div className="absolute -inset-4 sm:-inset-6 md:-inset-8 bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-xl blur-2xl animate-pulse-slow"></div>
+        <span aria-hidden="true" className="absolute -inset-4 sm:-inset-6 md:-inset-8 bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-xl blur-2xl animate-pulse-slow"></span>
         
         {/* Text with gradient */}
         <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-600 to-green-700 dark:from-green-300 dark:via-green-400 dark:to-green-500">
